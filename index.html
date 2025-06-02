@@ -27,6 +27,15 @@
       padding-top: 60px;
       color: #333;
     }
+    .hidden-field {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    }
     .container {
       background-color: #ffffff;
       padding: 40px;
@@ -92,13 +101,33 @@
     <p>Consulenza | Intermediazioni | Logistica & Trasporti</p>
     <br>
     <p><strong>CONTATTI:</strong></p>
-    <p> <a href="mailto:logistica@gpiazzolla.com">logistica@gpiazzolla.com</a></p>
-    <p> <a href="tel:+3908831950801">+39 0883 1950801</a></p>
+    <p> <a href="#" id="email-link">clicca per mostrare l'email</a></p>
+    <p><a href="#" id="phone-link">clicca per chiamare</a></p>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const phone = "+3908831950801";
+    const p = document.getElementById("phone-link");
+    p.href = "tel:" + phone;
+    p.innerText = "+39 0883 1950801";
+  });
+</script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const e = "logistica";
+    const d = "gpiazzolla.com";
+    const l = e + "@" + d;
+    const a = document.getElementById("email-link");
+    a.href = "mailto:" + l;
+    a.innerText = l;
+  });
+</script>
 
 <form action="https://formspree.io/f/xjkrvrpn" method="POST">
   <input type="hidden" name="_captcha" value="false">
 
-  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <input type="text" name="contact_time" class="hidden-field" tabindex="-1" autocomplete="off">
 
   <label for="nome">Nome</label>
   <input type="text" id="Nome" name="Nome" required>
