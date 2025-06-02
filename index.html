@@ -111,5 +111,25 @@
       <button type="submit">Invia</button>
     </form>
   </div>
+  <script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#000" },
+        button: { background: "#f1d600" }
+      },
+      theme: "classic",
+      position: "bottom",
+      content: {
+        message: "Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.",
+        dismiss: "Accetto",
+        link: "Leggi di più",
+        href: "/privacy.html"
+      }
+    });
+  });
+ </script>
+ <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </body>
 </html>
