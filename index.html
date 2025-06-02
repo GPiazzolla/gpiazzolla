@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <title>Gioacchino Piazzolla - Consulenza | Logistica | Trasporti</title>
-  <meta name="description" content="Gioacchino Piazzolla - Consulenza, Intermediazioni, Logistica & Trasporti. Contattami per informazioni, quotazioni, preventivi e progetti.">
+  <meta name="description" content="Gioacchino Piazzolla - Consulenza, Intermediazioni, Trasporti & Logistica. Contattami per informazioni, quotazioni, preventivi e progetti.">
   <meta name="keywords" content="trasporti, logistica, bancali, pallet, intermediazioni, intermediazione, consulenza, Gioacchino Piazzolla, nord italia, sud italia, centro italia, puglia, basilicata, veneto, lombardia, emilia romagna, lazio, toscana, marche, abruzzo, sicilia, trentino alto adige, friuli venezia giulia, piemonte, italia, intermodale, multimodale, deposito, depositi, merce, merci,  progetti logistci, handling, picking, temperatura controllata, atp, deperibile, frigo, trasporto merci, ferroviario, slot ferroviari, hupac p400, container, casse mobili, via treno, via nave, via camion, via strada, autotrasporto, autotrasporti, adr, food, gdo, refrigerato fresco, secco, industriale, bilico, motrice, autoreno, biga, carico completo, carico parziale, ftl, ltl, groupage, supply chain, spedizioni, nazionali, internazionali, sponda idraulica, contrassegno">
   <meta name="author" content="Gioacchino Piazzolla">
   <meta name="robots" content="index, follow">
@@ -18,6 +17,7 @@
   <meta property="og:url" content="https://gpiazzolla.com">
   <meta property="og:type" content="website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
 
   <style>
     body {
@@ -102,8 +102,35 @@
     <br>
     <p><strong>CONTATTI:</strong></p>
     <p> <a href="#" id="email-link">clicca per mostrare l'email</a></p>
-    <p><a href="#" id="phone-link">clicca per chiamare</a></p>
+    <p> <a href="#" id="phone-link">clicca per chiamare</a></p>
+    <p> <a href="#" id="cell-link">clicca per chiamare</a><br>
+  💬 <a href="#" id="whatsapp-link">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp" width="16" style="vertical-align: middle; margin-right: 6px;">
+    Chatta su WhatsApp
+  </a>
+</p>
 
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cellHref = "+393663279958";
+    const cellText = "366 327 9958";
+
+    // Telefono
+    const cell = document.getElementById("cell-link");
+    if (cell) {
+      cell.href = "tel:" + cellHref;
+      cell.innerText = cellText;
+    }
+
+    // 💬 WhatsApp
+    const wa = document.getElementById("whatsapp-link");
+    if (wa) {
+      wa.href = "https://wa.me/" + cellHref;
+    }
+  });
+</script>
+    
     <script>
   document.addEventListener("DOMContentLoaded", function() {
     const phoneHref = "+3908831950801";    // per il link tel:
