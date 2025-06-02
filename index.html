@@ -106,10 +106,11 @@
 
     <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const phone = "+3908831950801";
-    const p = document.getElementById("phone-link");
-    p.href = "tel:" + phone;
-    p.innerText = "0883 1950801";
+    const phoneHref = "+3908831950801";    // per il link tel:
+    const phoneText = "0883 1950801";      // testo visibile senza +39
+    const phone = document.getElementById("phone-link");
+    phone.href = "tel:" + phoneHref;
+    phone.innerText = phoneText;
   });
 </script>
 
