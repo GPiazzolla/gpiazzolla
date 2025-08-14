@@ -36,7 +36,6 @@
       text-align: center;
       color: #333;
       margin: 0;
-      padding-bottom: 80px; /* Spazio per il footer */
     }
     .container {
       background-color: #fff;
@@ -60,37 +59,37 @@
     h1, h2, h3 {
       margin: 12px 2;
     }
-.subtitle {
-  font-size: 22px;
-  font-weight: bold;
-  color: #3e3f41;
-  margin: 8px 0 15px 0;
-  letter-spacing: 1px;
-}
+    .subtitle {
+      font-size: 22px;
+      font-weight: bold;
+      color: #3e3f41;
+      margin: 8px 0 15px 0;
+      letter-spacing: 1px;
+    }
     h1 {
-  color: #4266b3;
-}
+      color: #4266b3;
+    }
     .info-section {
-  margin: 40px 0;
-  text-align: left;
-}
-.info-section h3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: #4266b3;
-  margin-bottom: 15px;
-}
-.info-section p {
-  font-size: 18px;
-  line-height: 1.3;
-  margin: 5px 0;
-}
+      margin: 40px 0;
+      text-align: left;
+    }
+    .info-section h3 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #4266b3;
+      margin-bottom: 15px;
+    }
+    .info-section p {
+      font-size: 18px;
+      line-height: 1.3;
+      margin: 5px 0;
+    }
     .hero-services {
-  margin-bottom: 40px;
-}
-.contact-block {
-  margin-top: 40px;
-}
+      margin-bottom: 40px;
+    }
+    .contact-block {
+      margin-top: 40px;
+    }
     p {
       font-size: 18px;
       margin: 8px 0;
@@ -132,16 +131,28 @@
     button:hover {
       background-color: #003d7a;
     }
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    /* Footer */
+    .footer-bottom {
       background-color: #333;
       color: white;
-      text-align: center;
-      padding: 10px 5px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
       font-size: 14px;
+      text-align: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+    .footer-logo {
+      height: 24px;
+      width: auto;
+      border-radius: 3px;
+      display: block;
+    }
+    .footer-bottom span {
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -152,29 +163,29 @@
 
     <h1>GIOACCHINO PIAZZOLLA</h1>
     <h2 class="subtitle">il mio partner, dalla strategia alle soluzioni</h2>
-   
+
     <img src="cap_copertina.jpg" alt="Vista aerea della sede logistica" class="cover">
 
-   <div class="info-section">
-  <h3>💼 SOLUZIONI AZIENDALI</h3>
-  <p>Consulenza Gestionale e Logistica</p>
-  <p>Agenzia Trasporti Nazionali  carichi parziali completi e dedicati</p>
-  <p>Depositi e Progetti logistici</p>
-</div>
+    <div class="info-section">
+      <h3>💼 SOLUZIONI AZIENDALI</h3>
+      <p>Consulenza Gestionale e Logistica</p>
+      <p>Agenzia Trasporti Nazionali carichi parziali completi e dedicati</p>
+      <p>Depositi e Progetti logistici</p>
+    </div>
 
-<div class="info-section">
-  <h3>📞 CONTATTI</h3>
-  <p><a href="tel:+3908831950801">0883 1950801</a></p>
-  <p><a href="mailto:logistica@gpiazzolla.com">logistica@gpiazzolla.com</a></p>
-  <p><a href="mailto:piazzolla.consulting@gmail.com">piazzolla.consulting@gmail.com</a></p>
-</div>
+    <div class="info-section">
+      <h3>📞 CONTATTI</h3>
+      <p><a href="tel:+3908831950801">0883 1950801</a></p>
+      <p><a href="mailto:logistica@gpiazzolla.com">logistica@gpiazzolla.com</a></p>
+      <p><a href="mailto:piazzolla.consulting@gmail.com">piazzolla.consulting@gmail.com</a></p>
+    </div>
 
-<div class="info-section">
-  <h3>🕒 ORARI DI APERTURA</h3>
-  <p>Lun \ Ven: 9:00 - 18:00</p>
-  <p>Sabato: 09:00 - 12:00</p>
-  <p>Domenica: Chiuso</p>
-</div>
+    <div class="info-section">
+      <h3>🕒 ORARI DI APERTURA</h3>
+      <p>Lun \ Ven: 9:00 - 18:00</p>
+      <p>Sabato: 09:00 - 12:00</p>
+      <p>Domenica: Chiuso</p>
+    </div>
 
     <form action="https://formspree.io/f/xjkrvrpn" method="POST">
       <input type="hidden" name="_captcha" value="false">
@@ -199,8 +210,9 @@
     </form>
   </div>
 
-  <footer>
-    PIAZZOLLA GIOACCHINO - Via Pio La Torre 7, 76121 Barletta (BT) - P.IVA 08989730729 - Iscr. Albo Trasporti BA 7470128N - REA 663891
+  <footer class="footer-bottom">
+    <img src="logo_gp.jpg" alt="Logo Gioacchino Piazzolla" class="footer-logo">
+    <span>PIAZZOLLA GIOACCHINO - Via Pio La Torre 7, 76121 Barletta (BT) - P.IVA 08989730729 - Iscr. Albo Trasporti BA 7470128N - REA 663891</span>
   </footer>
 
   <!-- Cookie -->
