@@ -19,7 +19,7 @@
   <meta property="og:type" content="website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBL75BJEKK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -36,6 +36,7 @@
       text-align: center;
       color: #333;
       margin: 0;
+      padding-bottom: 80px; /* Spazio per il footer */
     }
     .container {
       background-color: #fff;
@@ -70,17 +71,15 @@
   color: #4266b3;
 }
     .info-section {
-  margin: 40px 0; /* Spazio sopra e sotto */
+  margin: 40px 0;
   text-align: left;
 }
-
 .info-section h3 {
   font-size: 22px;
   font-weight: bold;
   color: #4266b3;
   margin-bottom: 15px;
 }
-
 .info-section p {
   font-size: 18px;
   line-height: 1.3;
@@ -133,6 +132,17 @@
     button:hover {
       background-color: #003d7a;
     }
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 5px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -143,7 +153,6 @@
     <h1>GIOACCHINO PIAZZOLLA</h1>
     <h2 class="subtitle">il mio partner, dalla strategia alle soluzioni</h2>
    
-
     <img src="cap_copertina.jpg" alt="Vista aerea della sede logistica" class="cover">
 
    <div class="info-section">
@@ -151,11 +160,6 @@
   <p>Consulenza Gestionale e Logistica</p>
   <p>Agenzia Trasporti Nazionali  carichi parziali completi e dedicati</p>
   <p>Depositi e Progetti logistici</p>
-</div>
-
-<div class="info-section">
-  <h3>📍 SEDE LEGALE</h3>
-  <p>Via Pio La Torre, 7 | 76121 Barletta (BT) IT</p>
 </div>
 
 <div class="info-section">
@@ -171,7 +175,6 @@
   <p>Sabato: 09:00 - 12:00</p>
   <p>Domenica: Chiuso</p>
 </div>
-
 
     <form action="https://formspree.io/f/xjkrvrpn" method="POST">
       <input type="hidden" name="_captcha" value="false">
@@ -195,6 +198,10 @@
       <button type="submit">Invia</button>
     </form>
   </div>
+
+  <footer>
+    PIAZZOLLA GIOACCHINO - Via Pio La Torre 7, 76121 Barletta (BT) - P.IVA 08989730729 - Iscr. Albo Trasporti BA 7470128N - REA 663891
+  </footer>
 
   <!-- Cookie -->
   <script>
