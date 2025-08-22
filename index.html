@@ -22,6 +22,15 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBL75BJEKK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FBL75BJEKK');
+  </script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -200,7 +209,8 @@
     <div class="info-section">
       <h3><i class="fas fa-briefcase"></i> SOLUZIONI AZIENDALI</h3>
       <p>Consulenza Gestionale e Logistica</p>
-      <p>Agenzia Trasporti Nazionali carichi parziali completi e dedicati</p>
+      <p>Agenzia Trasporti Nazionali</p>
+      <p>Carichi Parziali Completi e Dedicati<p>
       <p>Depositi e Progetti Logistici</p>
     </div>
 
@@ -242,10 +252,31 @@
   </div>
 
   <footer class="footer-bottom">
-    <span class="footer-brand">DOVECARICO<sup>™️</sup></span>
     <img src="logo_gp.jpg" alt="Logo Gioacchino Piazzolla" class="footer-logo">
-    <span>PIAZZOLLA GIOACCHINO - Via Pio La Torre 7, 76121 Barletta (BT) IT - P.IVA 08989730729 - Iscrizione Albo BA 7470128N - REA 663891</span>
+    <span>PIAZZOLLA GIOACCHINO - Sede legale: Via Pio La Torre 7, 76121 Barletta (BT) IT - P.IVA 08989730729 - Iscrizione Albo BA 7470128N - REA 663891</span>
   </footer>
+
+  <!-- Cookie -->
+  <script>
+    window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        palette: {
+          popup: { background: "#000" },
+          button: { background: "#f1d600" }
+        },
+        theme: "classic",
+        position: "bottom",
+        content: {
+          message: "Questo sito utilizza cookie tecnici per garantire il corretto funzionamento.",
+          dismiss: "Accetto",
+          link: "Leggi di più",
+          href: "/privacy.html"
+        }
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
 </body>
 </html>
