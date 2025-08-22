@@ -30,6 +30,28 @@ h1 {
   margin: 0;
   font-size: 32px;
 }
+.brand-wrapper {
+  display: flex;
+  align-items: center;   /* allinea verticalmente */
+  justify-content: center; /* centra orizzontalmente */
+  gap: 8px; /* spazio tra testo e dovecarico */
+  flex-wrap: wrap; /* se lo schermo è troppo stretto, va a capo */
+}
+
+.brand-wrapper h1 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #2f5bb7;
+  text-align: center;
+}
+
+.dovecarico {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #FFD700;
+  transform: rotate(-15deg);
+}
+
 .apple-brand {
   position: absolute;
   right: -160px;
