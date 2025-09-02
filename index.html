@@ -120,7 +120,6 @@
       transform: rotate(-12deg);
       text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.3);
       transition: transform 0.3s ease, text-shadow 0.3s ease;
-      text-decoration: none;
     }
     .apple-brand:hover {
       transform: rotate(-12deg) scale(1.1);
@@ -257,10 +256,6 @@
   </style>
 </head>
 <body>
-
-  <a href="https://freightconnect-2.preview.emergentagent.com/" target="_blank" class="apple-brand">
-    FreightConnect<sup>®</sup>
-  </a>
   
   <div class="container">
     <img src="logo_gp.jpg" alt="Logo Gioacchino Piazzolla" class="logo">
@@ -448,6 +443,20 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.apple-brand').forEach(function(el) {
+    var a = document.createElement('a');
+    a.href = 'https://freightconnect-2.preview.emergentagent.com/';
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.className = el.className;
+    a.innerHTML = el.innerHTML;
+    el.parentNode.replaceChild(a, el);
+  });
+});
+</script>
 
 </body>
 </html>
