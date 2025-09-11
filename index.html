@@ -583,30 +583,34 @@
       display: block;
     }
     .footer-brand {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      font-weight: 700;
-      font-style: oblique;
-      color: #f97216;
-      font-size: 0.5em;
-      margin-right: 10px;
-      text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, text-shadow 0.3s ease;
-      vertical-align: middle;
-      transform: rotate(-12deg);
-    }
-    .footer-brand:hover {
-      transform: rotate(-12deg) scale(1.2);
-      text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.5);
-    }
-    .footer-brand sup {
-      font-size: 0.4em;
-      color: #3e3f41;
-      vertical-align: super;
-    }
-    .footer-bottom span {
-      line-height: 1.4;
-    }
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-style: oblique;
+    color: #f97216;
+    font-size: 0.5em;
+    margin-right: 10px;
+    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    vertical-align: middle;
+    transform: rotate(-12deg);
+    text-decoration: none; /* Aggiunto per rimuovere la sottolineatura */
+}
+
+.footer-brand:hover {
+    transform: rotate(-12deg) scale(1.2);
+    text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.5);
+}
+
+.footer-brand sup {
+    font-size: 0.4em;
+    color: #3e3f41;
+    vertical-align: super;
+}
+
+.footer-bottom span {
+    line-height: 1.4;
+}
   </style>
 </head>
 <body>
@@ -768,10 +772,10 @@ cerco investitori per progetto piattaforma borsa carichi
   </div>
   
   <footer class="footer-bottom">
-    <span class="footer-brand">DOVECARICO<sup>™️</sup></span>
-    <img src="logo_gp.jpg" alt="Logo Gioacchino Piazzolla" class="footer-logo">
-    <span>PIAZZOLLA GIOACCHINO - Via Pio La Torre 7, 76121 Barletta (BT) IT - P.IVA 08989730729 - Iscrizione Albo BA 7470128N - REA 663891</span>
-  </footer>
+  <a href="https://dovecarico.it/" class="footer-brand" target="_blank" rel="noopener noreferrer">DOVECARICO<sup>™️</sup></a>
+  <img src="logo_gp.jpg" alt="Logo Gioacchino Piazzolla" class="footer-logo">
+  <span>PIAZZOLLA GIOACCHINO - Via Pio La Torre 7, 76121 Barletta (BT) IT - P.IVA 08989730729 - Iscrizione Albo BA 7470128N - REA 663891</span>
+</footer>
 
   <!-- Protezione bot contatti -->
   <script>
@@ -811,20 +815,6 @@ cerco investitori per progetto piattaforma borsa carichi
   </script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.apple-brand').forEach(function(el) {
-    var a = document.createElement('a');
-    a.href = 'https://dovecarico.it/';
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.className = el.className;
-    a.innerHTML = el.innerHTML;
-    el.parentNode.replaceChild(a, el);
-  });
-});
-</script>
 
 </body>
 </html>
