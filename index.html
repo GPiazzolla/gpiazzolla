@@ -739,25 +739,23 @@ cerco investitori per progetto piattaforma borsa carichi
 
 
 <form id="contact-form" action="https://formspree.io/f/xjkrvrpn" method="POST">
-  <label for="nome">Referente</label>
-  <input type="text" name="Referente" required>
+  <label for="referente">Referente</label>
+  <input type="text" id="referente" name="Referente" required autocomplete="name">
 
-  <label for="Azienda">Azienda</label>
-  <input type="text" id="Azienda" name="Azienda" required>
+  <label for="azienda">Azienda</label>
+  <input type="text" id="azienda" name="Azienda" required autocomplete="organization">
 
   <label for="email">Email</label>
-  <input type="email" name="email" required>
+  <input type="email" id="email" name="email" required autocomplete="email">
 
   <label for="telefono">Telefono</label>
-  <input type="text" id="telefono" name="telefono" required>
+  <input type="text" id="telefono" name="telefono" required autocomplete="tel">
 
   <label for="messaggio">Messaggio</label>
-  <textarea name="messaggio" required></textarea>
+  <textarea id="messaggio" name="messaggio" required></textarea>
 
-  <!-- honeypot nascosto -->
   <input type="text" name="contact_time" style="display:none">
 
-  <!-- disattiva captcha -->
   <input type="hidden" name="_captcha" value="false">
 
   <button type="submit">Invia</button>
