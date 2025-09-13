@@ -829,27 +829,27 @@ cerco investitori per progetto piattaforma borsa carichi
     });
   </script>
 
-  <!-- Cookie -->
   <script>
-    window.addEventListener("load", function(){
-      window.cookieconsent.initialise({
-        palette: {
-          popup: { background: "#000" },
-          button: { background: "#f1d600" }
-        },
-        theme: "classic",
-        position: "bottom",
-        content: {
-          message: "Questo sito utilizza cookie tecnici e di sola statistica per garantire il corretto funzionamento. GDPR 2016/679",
-          dismiss: "Accetto",
-          link: "Leggi di più",
-          href: "/privacy.html"
-        }
-      });
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#000" },
+        button: { background: "#f1d600" }
+      },
+      theme: "classic",
+      position: "bottom",
+      content: {
+        message: "Questo sito utilizza cookie tecnici necessari per il corretto funzionamento, e cookie di terze parti per finalità statistiche. Per maggiori dettagli, leggi la nostra informativa.",
+        dismiss: "Accetta",
+        deny: "Rifiuta",
+        link: "Informativa sulla Privacy",
+        href: "/privacy.html"
+      }
     });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
 </body>
 </html>
