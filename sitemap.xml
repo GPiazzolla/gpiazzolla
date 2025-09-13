@@ -5,23 +5,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gpiazzolla.com/</loc>
-    <lastmod>2025-09-12T18:32:00+00:00</lastmod>
+    <lastmod>2025-09-13T13:23:00+00:00</lastmod>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://gpiazzolla.com/trasporti-gioacchino-piazzolla_v2.webp</image:loc>
-      <image:title>trasporti logistica Gioacchino Piazzolla consulenza</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://gpiazzolla.com/trasporti-logistica-deposito_v2.webp</image:loc>
-      <image:title>Deposito Merci Sede Logistica Trasporto Spedizioni ADR</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://gpiazzolla.com/gpiazzolla_v2.jpg</image:loc>
-      <image:title>Trasporti Gioacchino Piazzolla Logo</image:title>
-    </image:image>
   </url>
 </urlset>
 </urlset>
+
 
 
 
