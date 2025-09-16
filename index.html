@@ -642,6 +642,26 @@
 .footer-bottom span {
     line-height: 1.4;
 }
+@media (max-width: 768px) {
+    /* Impila le sezioni verticalmente */
+    .info-section {
+        flex-direction: column;
+    }
+    .info-section > div[style*="flex:1;"],
+    .info-section > div[style*="flex:2;"] {
+        flex: 1 1 100% !important;
+        min-width: 100% !important;
+        width: 100% !important;
+    }
+    .info-section img {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .info-section p, .info-section h3 {
+        font-size: 1em !important;
+        line-height: 1.4 !important;
+    }
+}
   </style>
 </head>
 <body>
