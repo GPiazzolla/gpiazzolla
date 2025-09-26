@@ -546,6 +546,21 @@
       border-radius: 10px;
       margin-bottom: 20px;
     }
+    .profile-photo {
+    width: 100%; 
+    max-width: 320px; /* Max-width che avevi nello style inline */
+    height: auto; 
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Ombra che avevi nello style inline */
+}
+    .warehouse-photo {
+    width: 100%; 
+    max-width: 320px; /* Max-width che avevi nello style inline */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
     .info-section {
       margin: 40px 0;
       text-align: left;
@@ -681,8 +696,13 @@ Gioacchino Piazzolla esperienza in trasporti e logistica di 20 anni in azienda d
 </a>
       <div style="flex:1; min-width:250px; text-align:center;">
         <picture>
-  <source srcset="trasporti-gioacchino-piazzolla_v2.webp" type="image/webp">
-  <img src="logistica-gioacchino-piazzolla-consulenza_v2.jpg" alt="Trasporti Logistica Gioacchino Piazzolla Consulenza Puglia Veneto Lazio Toscana" fetchpriority="high" width="320" height="400" style="width:100%; max-width:320px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+    <source srcset="trasporti-gioacchino-piazzolla_v2.webp" type="image/webp" width="400" height="504">
+    <img src="logistica-gioacchino-piazzolla-consulenza_v2.jpg" 
+         alt="Trasporti Logistica Gioacchino Piazzolla Consulenza Puglia Veneto Lazio Toscana" 
+         fetchpriority="high" 
+         width="400" 
+         height="504" 
+         class="profile-photo"> 
 </picture>
   </div>
       <div style="flex:2; min-width:280px; text-align:left;">
@@ -708,9 +728,14 @@ cerco investitori per progetto piattaforma borsa carichi multi servizi, il march
       </div>
       <div style="flex:1; min-width:250px; text-align:center;">
         <picture>
-          <source srcset="trasporti-logistica-deposito_v2.webp" type="image/webp">
-          <img src="trasporti-logistica-deposito_v2.jpg" alt="Deposito Merci Sede Logistica Trasporto Spedizioni ADR Puglia Veneto Lombardia Emilia Romagna" loading="lazy" style="width:100%; max-width:320px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-        </picture>
+    <source srcset="trasporti-logistica-deposito_v2.webp" type="image/webp" width="368" height="250">
+    <img src="trasporti-logistica-deposito_v2.jpg" 
+         alt="Deposito Merci Sede Logistica Trasporto Spedizioni ADR Puglia Veneto Lombardia Emilia Romagna" 
+         loading="lazy" 
+         width="368" 
+         height="250"
+         class="warehouse-photo">
+</picture>
       </div>
     </div>
 
