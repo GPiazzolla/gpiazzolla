@@ -1,12 +1,9 @@
 name: IndexNow Submission Automation
-
 on:
   # Avvia questo workflow ad ogni 'push' (aggiornamento) sulla branch principale.
   push:
     branches:
-      - main 
-      - master # Includi 'master' solo se la tua branch di pubblicazione è quella
-
+      - main
 jobs:
   submit-indexnow:
     runs-on: ubuntu-latest
@@ -14,11 +11,6 @@ jobs:
       - name: Esegui l'IndexNow Action
         uses: bojieyang/indexnow-action@v2
         with:
-          # URL COMPLETO DELLA SITEMAP CON IL TUO DOMINIO CUSTOM
           sitemap-location: 'https://gpiazzolla.com/sitemap.xml'
-          
-          # Usa il Secret che hai nominato: INDEX_NOW
-          key: ${{ secrets.INDEX_NOW }}
-          
-          # Indirizzo IndexNow universale
+          key: ${{ secrets.INDEXNOW_KEY }}
           endpoint: api.indexnow.org
