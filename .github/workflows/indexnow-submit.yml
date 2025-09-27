@@ -1,6 +1,5 @@
 name: IndexNow Submission Automation
 on:
-  # Avvia questo workflow ad ogni 'push' (aggiornamento) sulla branch principale.
   push:
     branches:
       - main
