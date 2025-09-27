@@ -1,3 +1,6 @@
 compress_html:
   clobber: true
   cache_ttl: 2592000
+include:
+  - 8e2r8wt5fbu4va1aata4wjizu3qm4j687.txt
+  - sitemap.xml
