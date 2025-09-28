@@ -1,6 +1,9 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Gioacchino Piazzolla - Consulenza | Logistica | Trasporti",
+  "short_name": "gpiazzolla.com",
+  "description": "Servizi logistici e trasporti in tutta Italia.",
+  "start_url": "https://gpiazzolla.com",
+  "scope": "/",
   "icons": [
     {
       "src": "/gioacchino-piazzolla-trasporti-logistica-manifest192.png",
