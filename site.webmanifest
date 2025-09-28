@@ -3,6 +3,8 @@
   "short_name": "gpiazzolla.com",
   "description": "Servizi logistici e trasporti in tutta Italia.",
   "start_url": "https://gpiazzolla.com",
+  "theme_color": "#004270",
+  "background_color": "#ffffff",
   "scope": "/",
   "icons": [
     {
