@@ -576,6 +576,28 @@
         text-align: center;
       }
     }
+@media (max-width: 600px) {
+    /* Forzo lo stacking di testo e immagine sotto i 600px */
+    .services-content {
+        flex-direction: column;
+        gap: 20px; /* Riduzione del gap per lo stacking */
+        margin-top: 10px;
+    }
+    /* Permetto all'immagine di occupare la larghezza piena */
+    .services-image {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    /* Anche il wrapper del testo deve avere la larghezza piena */
+    .services-text-wrapper {
+        min-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+  .footer-brand {
+    font-size: 0.7em;
+  }
+}
     .subtitle {
       font-size: 21px;
       font-weight: bold;
@@ -645,6 +667,47 @@
       border-radius: 4px;
       font-size: 16px;
     }
+.services-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+.services-image {
+    flex: 1; 
+    min-width: 280px;
+    max-width: 400px;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+}
+.services-image .collage-image {
+    height: 100%;         /* Ora ha la priorità sulla regola generica img {} */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.services-text-wrapper {
+    flex: 2; /* Occupare 2/3 dello spazio */
+    min-width: 280px;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Gli elementi si impilano verticalmente */
+    justify-content: space-between; /* Spinge l'intestazione in alto e il testo in basso */
+    height: 100%; /* Molto importante: si allunga all'altezza della colonna immagine */
+}
+.services-text p:last-child {
+    margin-bottom: 0;
+}
+.services-text-wrapper h3 {
+    margin-top: 0; /* Rimuoviamo il margine superiore */
+}
+.services-text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
     button {
       margin-top: 20px;
       padding: 12px 24px;
@@ -792,15 +855,44 @@
         </div>
 
         <div class="info-section">
+    <div class="services-content">
+        
+        <div class="services-text-wrapper">
+            
             <h3>SERVIZI E SOLUZIONI AZIENDALI</h3>
-            <p>TRASPORTI NAZIONALI</p>
-            <p>DEDICATI &nbsp;PARZIALI LtL &nbsp;COMPLETI FtL &nbsp;GROUPAGE</p>
-            <p>SERVIZI EXPRESS &nbsp;24 / 48 h</p>
-            <p>ADR CLASSI &nbsp;&nbsp;2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 8 &nbsp; 9 &nbsp; *7 &nbsp; *1</p>
-            <p>DEPOSITO MERCI E PROGETTI LOGISTICI</p>
-            <p>CONSULENZA E GESTIONE LOGISTICA</p>
-            <p><strong>SETTORI:&nbsp;&nbsp;FARMACEUTICA &nbsp;INDUSTRIA &nbsp;FOOD &nbsp;GDO</strong></p>
+            
+            <div class="services-text">
+                <p>TRASPORTI NAZIONALI</p>
+                <p>DEDICATI &nbsp;PARZIALI LTL &nbsp;COMPLETI FTL &nbsp;GROUPAGE</p>
+                <p>SERVIZI EXPRESS &nbsp;24 / 48 h</p>
+                <p>ADR CLASSI &nbsp;&nbsp;2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 8 &nbsp; 9 &nbsp; *1</p>
+                <p>ADR CLASSE &nbsp;7 &nbsp;MATERIE RADIOATTIVE</p>
+                <p>DISTRIBUZIONE MERCI E FARMACI URGENTI</p>
+                <p>DEPOSITO MERCI E PROGETTI LOGISTICI</p>
+                <p>CONSULENZA E GESTIONE LOGISTICA</p>
+                <p><strong>SETTORI:&nbsp;FARMACEUTICA &nbsp;INDUSTRIA &nbsp;FOOD &nbsp;GDO</strong></p>
+            </div>
         </div>
+        
+        <div class="services-image">
+            <picture style="display: block; height: 100%;">
+                
+                <source srcset="trasporti-radiofarmaci-adr-merce-pallet.webp" 
+                        type="image/webp" 
+                        width="999" 
+                        height="707">
+                
+                <img src="trasporti-radiofarmaci-adr-merce-pallet.jpg"
+                    alt="Trasporti, Soluzioni aziendali, Servizi, Logistica, Farmaci, ADR, Radiofarmaci"
+                    loading="lazy"
+                    width="999"  
+                    height="707"
+                    class="collage-image"> 
+            </picture>
+        </div>
+        
+    </div>
+</div>
 
         <div class="info-section">
             <h3>CONTATTI</h3>
