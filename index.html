@@ -599,12 +599,27 @@
   }
 }
     .subtitle {
-      font-size: 21px;
-      font-weight: bold;
-      color: #3e3f41;
-      margin: 8px 0 15px 0;
-      letter-spacing: 1px;
-    }
+    font-size: 20px;
+    font-weight: bold;
+    color: #3e3f41;
+    margin: 8px 0 15px 0;
+    letter-spacing: 1px;
+    
+    /* EFFETTO DIGITAZIONE */
+    overflow: hidden;         /* Nasconde il testo che è fuori da "width" */
+    border-right: none;       /* Rimuove il cursore verticale */
+    white-space: nowrap;      /* Mantiene il testo su una singola riga */
+    width: 0;                 /* Inizia con larghezza zero */
+    /* 42 è il numero di caratteri nella dicitura */
+    animation: 
+        typing 2.5s steps(42, end) forwards; 
+}
+
+/* KEYFRAMES PER L'ANIMAZIONE DI DIGITAZIONE */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
     img.cover {
       width: 100%;
       max-height: 400px;
