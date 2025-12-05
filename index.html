@@ -916,7 +916,6 @@
             <h3>CONTATTI</h3>
             <p><span id="tel1"></span> - <span id="tel2"></span></p>
             <p><span id="mail1"></span></p>
-            <p><span id="mail2"></span></p>
             
         <div style="margin-top: 10px;">
             <a href="https://www.linkedin.com/in/gioacchino-p86" target="_blank"
@@ -1019,16 +1018,14 @@
     <script>
         document.addEventListener("DOMContentLoaded", function(){
             // telefoni
-            var tel1 = "0883 1950801";
-            var tel2 = "366 3279958";
+            var tel1 = "366 3279958";
+            var tel2 = "0883 1950801";
             document.getElementById("tel1").innerHTML = '<a href="tel:' + tel1.replace(/\s+/g,"") + '" style="text-decoration: none;">' + tel1 + '</a>';
-            document.getElementById("tel2").innerHTML = '<a href="tel:' + tel2.replace(/\s+/g,"") + '" style="text-decoration: none;">' + tel2 + '</a>';
+            document.getElementById("tel2").innerHTML = '<a href="tel:' + tel2.replace(/\s+/g,"") + '" style="text-decoration: none;">' + tel1 + '</a>';
 
             // email
             var e1 = "logistica" + "@" + "gpiazzolla.com";
-            var e2 = "piazzolla.consulting" + "@" + "gmail.com";
             document.getElementById("mail1").innerHTML = '<a href="mailto:' + e1 + '" style="text-decoration: none;">' + e1 + '</a>';
-            document.getElementById("mail2").innerHTML = '<a href="mailto:' + e2 + '" style="text-decoration: none;">' + e2 + '</a>';
         });
     </script>
 
