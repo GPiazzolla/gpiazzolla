@@ -564,13 +564,13 @@
       color: #3e3f41;
     }
     /* Stile per le icone ADR */
-  .adr-icon {
-    width: 1em;              /* dimensione pari al testo */
-    height: 1em;
-    vertical-align: middle;  /* centra rispetto al numero */
-    margin-left: 0.2em;      /* piccolo spazio dopo il numero */
-    margin-right: 0.2em;     /* piccolo spazio prima del prossimo numero */
-    /* Tooltip semplice (title già funziona su desktop, mobile mostra il testo alt) */
+  .adr-icon {
+    width: 1em !important;            /* FORZA la larghezza alla dimensione del testo */
+    height: 1em !important;           /* FORZA l'altezza alla dimensione del testo */
+    display: inline-block;            /* Aiuta il ridimensionamento in linea */
+    vertical-align: middle;           /* Centra rispetto al numero */
+    margin-left: 0.2em;
+    margin-right: 0.2em;
   }
     /* adattamento mobile */
     @media (max-width: 768px) {
