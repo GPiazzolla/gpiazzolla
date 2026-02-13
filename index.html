@@ -666,15 +666,15 @@
 }
     .warehouse-photo {
     width: 100%;
-    max-width: 368px;
-    aspect-ratio: 368 / 250;
-    height: 100%;
-    object-fit: cover;      /* Riempe il contenitore */
-    object-position: center; /* Centra l’immagine visibile */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    pointer-events: none;
+    max-width: 368px;       /* larghezza desiderata */
+    height: 250px;          /* altezza fissa */
+    object-fit: contain;     /* mostra tutta l’immagine senza tagli */
+    background-color: #fff;  /* colore di sfondo uniforme */
+    border-radius: 0;        /* niente angoli arrotondati */
+    box-shadow: none;        /* niente ombre */
+    border: none;            /* niente bordi */
     display: block;
+    pointer-events: none;
 }
     .info-section {
       margin: 40px 0;
