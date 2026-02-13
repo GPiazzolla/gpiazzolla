@@ -941,9 +941,9 @@
         <div class="info-section" style="width: 100%; clear: both;">
     <h3 style="margin-bottom: 15px;">CONTATTI</h3>
     
-    <p style="margin: 8px 0;">UFFICIO: <span id="tel2"></span></p>
-    <p style="margin: 8px 0;">MOBILE AZIENDALE: <span id="tel1"></span></p>
-    <p style="margin: 8px 0;">MAIL: <span id="mail1"></span></p>
+    <p style="margin: 8px 0;"><strong>Uffici:</strong> <span id="tel2"></span></p>
+    <p style="margin: 8px 0;"><strong>Mobile Aziendale:</strong> <span id="tel1"></span></p>
+    <p style="margin: 8px 0;"><strong>Mail:</strong> <span id="mail1"></span></p>
     
     <div style="margin-top: 15px;">
         <a href="https://www.linkedin.com/in/gioacchino-p86" target="_blank"
@@ -1049,7 +1049,7 @@
         var emailContatto = "logistica" + "@" + "gpiazzolla.com";
 
         // Inserimento dati con stile per i link
-        var linkStyle = 'style="text-decoration: none; color: inherit;"';
+        var linkStyle = 'style="text-decoration: none;';
         
         document.getElementById("tel2").innerHTML = '<a href="tel:' + telUfficio.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telUfficio + '</a>';
         document.getElementById("tel1").innerHTML = '<a href="tel:' + telMobile.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telMobile + '</a>';
