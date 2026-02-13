@@ -666,9 +666,9 @@
 }
     .warehouse-photo {
     width: 100%;
-    max-width: 320px;      /* larghezza massima */
-    max-height: 400px;     /* altezza massima */
-    height: auto;          /* mantiene proporzioni */
+    max-width: 368px;        /* nuova larghezza fissa massima */
+    height: auto;            /* mantiene proporzioni */
+    aspect-ratio: 368 / 250; /* forza proporzione corretta */
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -864,7 +864,7 @@
             <img src="trasporti-logistica-deposito_v2.jpg" 
                  alt="Deposito, Merci, Sede Logistica, Trasporto, Spedizioni, ADR, Gioacchino Piazzolla, Puglia, Basilicata, Veneto, Lombardia, Emilia Romagna, gpiazzolla" 
                  fetchpriority="high" 
-                 class="warehouse-photo" 
+                 class="profile-photo" 
                  style="width:100%; height:100%; object-fit:cover;">
         </picture>
     </div>
