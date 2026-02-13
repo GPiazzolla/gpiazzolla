@@ -654,15 +654,17 @@
       margin-bottom: 20px;
     }
     .profile-photo {
-    width: 100%;
-    max-width: 320px;      /* larghezza massima */
-    max-height: 400px;     /* altezza massima */
-    height: auto;          /* mantiene proporzioni */
-    object-fit: cover;
-    border-radius: 12px;
+    width: 100%;                  /* prende tutta la larghezza del contenitore */
+    max-width: 400px;             /* larghezza massima */
+    height: auto;                 /* mantiene proporzioni originali */
+    aspect-ratio: 400 / 504;      /* mantiene proporzioni della foto originale */
+    object-fit: contain;          /* tutta la foto visibile senza tagli */
+    border-radius: 12px;          /* angoli arrotondati */
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     pointer-events: none;
     display: block;
+    background-color: #fff;       /* sfondo bianco se ci sono bordi vuoti */
+    object-position: center;      /* centra l’immagine */
 }
     .warehouse-photo {
     width: 100%;
