@@ -503,285 +503,322 @@
 </script>
 
   <style>
-
-/* =========================
-   BASE
-========================= */
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #333;
-  margin: 0;
-  text-align: center;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 10px 30px 40px 30px;
-}
-
-img {
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      text-align: center;
+      color: #333;
+      margin: 0;
+    }
+    .container {
+      background-color: transparent;
+      padding-top: 10px; 
+      padding-bottom: 30px;
+      padding-left: 30px; 
+      padding-right: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
-
-/* =========================
-   HEADER
-========================= */
-
-.title-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-h1 {
+    img.logo {
+      max-width: 300px;
+      padding: 0px;
+      margin-bottom: 30px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .title-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    h1 {
   font-size: 40px;
   font-weight: bold;
   color: #4963ad;
   margin: 0;
-  text-shadow:
-    0 0 3px #ffffff,
-    0 0 7px rgba(255,255,255,0.25),
-    1px 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 0 3px #ffffff, 0 0 7px rgba(255,255,255,0.25), 1px 1px 2px rgba(0,0,0,0.2);
+}
+    .apple-brand {
+      position: absolute;
+      right: -160px;
+      top: -4px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 700;
+      font-style: oblique;
+      color: #f97216;
+      font-size: 20px;
+      transform: rotate(-12deg);
+      text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+      text-decoration: none;
+    }
+    .apple-brand:hover {
+      transform: rotate(-12deg) scale(1.1);
+      text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.5);
+    }
+    .apple-brand sup {
+      font-size: 0.5em;
+      vertical-align: super;
+      color: #3e3f41;
+    }
+    
+    /* Stile per le icone ADR */
+  .adr-icon {
+    /* Manteniamo l'allineamento e i margini di base */
+    vertical-align: middle;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    display: inline-block; /* Importante per il ridimensionamento */
+  }
+  
+  /* CLASSE 7 (Radioattivo) - Potrebbe essere troppo grande */
+  .icona-radio {
+    width: 0.9em !important;  
+    height: 0.85em !important; 
+  }
+
+  /* CLASSE 1 (Esplosivo) - Potrebbe essere troppo piccolo */
+  .icona-esplosivo {
+    width: 1.1em !important; /* Aumentato leggermente (es. 1.1em) */
+    height: 1.05em !important
+    transform: translateY(-0.7px);
+  }
+    
+    /* adattamento mobile */
+    @media (max-width: 768px) {
+      .apple-brand {
+        position: relative;
+        right: auto;
+        top: auto;
+        display: block;
+        margin: 10px auto 0 auto;
+        transform: rotate(0deg);
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+@media (max-width: 600px) {
+    /* Forzo lo stacking di testo e immagine sotto i 600px */
+    .services-content {
+        flex-direction: column;
+        gap: 20px; /* Riduzione del gap per lo stacking */
+        margin-top: 10px;
+    }
+    /* Permetto all'immagine di occupare la larghezza piena */
+    .services-image {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    /* Anche il wrapper del testo deve avere la larghezza piena */
+    .services-text-wrapper {
+        min-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+  .footer-brand {
+    font-size: 0.7em;
+  }
+}
+    .subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3e3f41;
+    margin: 8px 0 15px 0;
+    letter-spacing: 1px;
+    
+    /* EFFETTO DIGITAZIONE */
+    overflow: hidden;         /* Nasconde il testo che è fuori da "width" */
+    border-right: none;       /* Rimuove il cursore verticale */
+    white-space: nowrap;      /* Mantiene il testo su una singola riga */
+    width: 0;                 /* Inizia con larghezza zero */
+    /* 42 è il numero di caratteri nella dicitura */
+    animation: 
+        typing 1.0s steps(42, end) forwards; 
 }
 
-.apple-brand {
-  position: absolute;
-  left: 100%;
-  margin-left: 15px;
-  top: 0;
-  font-weight: 700;
-  font-style: oblique;
-  color: #f97216;
-  font-size: 20px;
-  transform: rotate(-12deg);
-  text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.3);
-  text-decoration: none;
-  transition: 0.3s ease;
+/* KEYFRAMES PER L'ANIMAZIONE DI DIGITAZIONE */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
-
-.apple-brand:hover {
-  transform: rotate(-12deg) scale(1.1);
+    img.cover {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .profile-photo {
+    width: 100%; max-width: 320px; /* larghezza massima */ max-height: 400px; /* altezza massima */ height: auto; /* mantiene proporzioni */ object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); pointer-events: none;
 }
-
-.apple-brand sup {
-  font-size: 0.5em;
-  vertical-align: super;
-  color: #3e3f41;
+    .warehouse-photo {
+    width: 100%;
+    max-width: 368px;       /* larghezza desiderata */
+    height: 250px;          /* altezza fissa */
+    object-fit: contain;     /* tutta l’immagine senza tagli */
+    background-color: #fff;  /* sfondo uniforme */
+    border-radius: 12px;     /* angoli arrotondati come le altre foto */
+    box-shadow: none;        /* niente ombre */
+    border: none;            /* niente bordi */
+    display: block;
+    pointer-events: none;
+      overflow: hidden;
 }
-
-.subtitle {
-  font-size: 20px;
-  font-weight: bold;
-  color: #3e3f41;
-  margin: 8px 0 20px 0;
-  letter-spacing: 1px;
-}
-
-/* =========================
-   SEZIONI INFO
-========================= */
-
-.info-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin: 60px 0;
-  align-items: center;
-  text-align: left;
-}
-
-.image-box {
-  flex: 1;
-  min-width: 260px;
-  display: flex;
-  justify-content: center;
-}
-
-.image-wrapper {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.text-box {
-  flex: 2;
-  min-width: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.info-section h3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: #2e6495;
-  margin-bottom: 15px;
-}
-
-.info-section p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin: 8px 0;
-}
-
-.about-quote {
+    .info-section {
+      margin: 40px 0;
+      text-align: left;
+    }
+    .info-section h3 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2e6495;
+      margin-bottom: 15px;
+    }
+    .info-section p {
+      font-size: 18px;
+      line-height: 1.3;
+      margin: 5px 0;
+    }
+    .about-quote {
+  font-family: Arial, sans-serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 12px;
   color: #3e3f41;
-  margin-top: 10px;
+  margin: 6px 0;
 }
-
-/* =========================
-   SERVICES
-========================= */
-
+    form {
+      margin-top: 30px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #2e6495;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
 .services-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 20px;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
 }
-
 .services-image {
-  flex: 1;
-  min-width: 280px;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
+    flex: 1; 
+    min-width: 280px;
+    max-width: 400px;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
 }
-
-.services-image img {
-  width: 100%;
-  border-radius: 16px;
-  object-fit: cover;
+.services-image .collage-image {
+    height: 100%;         /* Ora ha la priorità sulla regola generica img {} */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    pointer-events: none;
 }
-
 .services-text-wrapper {
-  flex: 2;
-  min-width: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
+    flex: 2; /* Occupare 2/3 dello spazio */
+    min-width: 280px;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Gli elementi si impilano verticalmente */
+    justify-content: space-between; /* Spinge l'intestazione in alto e il testo in basso */
+    height: 100%; /* Molto importante: si allunga all'altezza della colonna immagine */
 }
-
+.services-text p:last-child {
+    margin-bottom: 0;
+}
 .services-text-wrapper h3 {
-  margin-top: 0;
+    margin-top: 0; /* Rimuoviamo il margine superiore */
+}
+.services-text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #2e6495;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+    .footer-bottom {
+      background-color: #004270;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      font-size: 16px;
+      text-align: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+    .footer-logo {
+      height: 27px;
+      width: auto;
+      border-radius: 3px;
+      display: block;
+    }
+    .footer-brand {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-style: oblique;
+    color: #f97216;
+    font-size: 0.5em;
+    margin-right: 10px;
+    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    vertical-align: middle;
+    transform: rotate(-12deg);
+    text-decoration: none; /* Aggiunto per rimuovere la sottolineatura */
 }
 
-/* =========================
-   FORM
-========================= */
-
-form {
-  margin-top: 30px;
-  text-align: left;
+.footer-brand:hover {
+    transform: rotate(-12deg) scale(1.2);
+    text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.5);
 }
 
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #2e6495;
+.footer-brand sup {
+    font-size: 0.4em;
+    color: #3e3f41;
+    vertical-align: super;
 }
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #2e6495;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-button:hover {
-  background-color: #003366;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer-bottom {
-  background-color: #004270;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
-  font-size: 15px;
-  margin-top: 50px;
-  text-align: center;
-}
-
-.footer-brand {
-  font-weight: 700;
-  font-style: oblique;
-  color: #f97216;
-  transform: rotate(-12deg);
-  text-decoration: none;
-}
-
 .footer-address {
-  color: white;
   text-decoration: none;
+  color: white;
 }
 
 .footer-address:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* opzionale */
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-  .apple-brand {
-    position: relative;
-    left: auto;
-    margin: 10px auto 0 auto;
-    transform: rotate(0deg);
-    display: block;
-    text-align: center;
-  }
-
-  .info-section,
-  .services-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-box,
-  .services-text-wrapper {
-    text-align: center;
-  }
+.footer-bottom span {
+    line-height: 1.4;
 }
 .cc-window{opacity:1;-webkit-transition:opacity 1s ease;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{-webkit-transition:transform 1s ease;-webkit-transition:-webkit-transform 1s ease;transition:-webkit-transform 1s ease;transition:transform 1s ease;transition:transform 1s ease,-webkit-transform 1s ease}.cc-animate.cc-revoke.cc-top{-webkit-transform:translateY(-2em);transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{-webkit-transform:translateY(2em);transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-top{-webkit-transform:translateY(0);transform:translateY(0)}.cc-animate.cc-revoke.cc-active.cc-bottom{-webkit-transform:translateY(0);transform:translateY(0)}.cc-revoke:hover{-webkit-transform:translateY(0);transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;-webkit-transition:max-height 1s;transition:max-height 1s}
 .cc-revoke,.cc-window{position:fixed;overflow:hidden;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window.cc-static{position:static}.cc-window.cc-floating{padding:2em;max-width:24em;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner{padding:1em 1.8em;width:100%;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.cc-revoke{padding:.5em}.cc-revoke:hover{text-decoration:underline}.cc-header{font-size:18px;font-weight:700}.cc-btn,.cc-close,.cc-link,.cc-revoke{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em;text-decoration:underline}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-highlight .cc-btn:first-child{background-color:transparent;border-color:transparent}.cc-highlight .cc-btn:first-child:focus,.cc-highlight .cc-btn:first-child:hover{background-color:transparent;text-decoration:underline}.cc-close{display:block;position:absolute;top:.5em;right:.5em;font-size:1.6em;opacity:.9;line-height:.75}.cc-close:focus,.cc-close:hover{opacity:1}
@@ -791,6 +828,7 @@ button:hover {
 .cc-theme-edgeless.cc-window{padding:0}.cc-floating.cc-theme-edgeless .cc-message{margin:2em;margin-bottom:1.5em}.cc-banner.cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner.cc-theme-edgeless .cc-message{margin-left:1em}.cc-floating.cc-theme-edgeless .cc-btn+.cc-btn{margin-left:0}
   </style>
 </head>
+
   
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRP5J6RM"
