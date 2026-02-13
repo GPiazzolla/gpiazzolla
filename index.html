@@ -666,14 +666,15 @@
 }
     .warehouse-photo {
     width: 100%;
-    max-width: 368px;        /* nuova larghezza fissa massima */
-    height: auto;            /* mantiene proporzioni */
-    aspect-ratio: 368 / 250; /* forza proporzione corretta */
-    object-fit: cover;
+    max-width: 368px;
+    aspect-ratio: 368 / 250;
+    height: auto;
+    object-fit: contain;    /* <-- qui */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     pointer-events: none;
     display: block;
+    background-color: #fff; /* sfondo bianco se non riempie tutto */
 }
     .info-section {
       margin: 40px 0;
