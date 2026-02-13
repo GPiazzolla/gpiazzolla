@@ -821,44 +821,6 @@
 .footer-bottom span {
     line-height: 1.4;
 }
-    /* Forza le info-section a flex per l'immagine a lato del testo */
-.info-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; /* Allinea verticalmente testo e immagine */
-  gap: 20px;
-  margin: 40px 0;
-  text-align: left;
-}
-
-/* Impediamo che le immagini si centrino */
-.info-section > div:first-child,
-.info-section > div:last-child {
-  text-align: center; /* mantiene centrata l'immagine all'interno della colonna */
-}
-
-/* Limitiamo la larghezza delle immagini per mantenere proporzioni */
-.profile-photo,
-.warehouse-photo {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  pointer-events: none;
-}
-
-/* Mobile: stack verticale */
-@media (max-width: 768px) {
-  .info-section {
-    flex-direction: column;
-  }
-  .profile-photo,
-  .warehouse-photo {
-    max-width: 100%;
-  }
-}
 .cc-window{opacity:1;-webkit-transition:opacity 1s ease;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{-webkit-transition:transform 1s ease;-webkit-transition:-webkit-transform 1s ease;transition:-webkit-transform 1s ease;transition:transform 1s ease;transition:transform 1s ease,-webkit-transform 1s ease}.cc-animate.cc-revoke.cc-top{-webkit-transform:translateY(-2em);transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{-webkit-transform:translateY(2em);transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-top{-webkit-transform:translateY(0);transform:translateY(0)}.cc-animate.cc-revoke.cc-active.cc-bottom{-webkit-transform:translateY(0);transform:translateY(0)}.cc-revoke:hover{-webkit-transform:translateY(0);transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;-webkit-transition:max-height 1s;transition:max-height 1s}
 .cc-revoke,.cc-window{position:fixed;overflow:hidden;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window.cc-static{position:static}.cc-window.cc-floating{padding:2em;max-width:24em;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner{padding:1em 1.8em;width:100%;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.cc-revoke{padding:.5em}.cc-revoke:hover{text-decoration:underline}.cc-header{font-size:18px;font-weight:700}.cc-btn,.cc-close,.cc-link,.cc-revoke{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em;text-decoration:underline}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-highlight .cc-btn:first-child{background-color:transparent;border-color:transparent}.cc-highlight .cc-btn:first-child:focus,.cc-highlight .cc-btn:first-child:hover{background-color:transparent;text-decoration:underline}.cc-close{display:block;position:absolute;top:.5em;right:.5em;font-size:1.6em;opacity:.9;line-height:.75}.cc-close:focus,.cc-close:hover{opacity:1}
 .cc-revoke.cc-top{top:0;left:3em;border-bottom-left-radius:.5em;border-bottom-right-radius:.5em}.cc-revoke.cc-bottom{bottom:0;left:3em;border-top-left-radius:.5em;border-top-right-radius:.5em}.cc-revoke.cc-left{left:3em;right:unset}.cc-revoke.cc-right{right:3em;left:unset}.cc-top{top:1em}.cc-left{left:1em}.cc-right{right:1em}.cc-bottom{bottom:1em}.cc-floating>.cc-link{margin-bottom:1em}.cc-floating .cc-message{display:block;margin-bottom:1em}.cc-window.cc-floating .cc-compliance{-webkit-box-flex:1;-ms-flex:1 0 auto;flex:1 0 auto}.cc-window.cc-banner{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.cc-banner.cc-top{left:0;right:0;top:0}.cc-banner.cc-bottom{left:0;right:0;bottom:0}.cc-banner .cc-message{display:block;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;max-width:100%;margin-right:1em}.cc-compliance{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:justify;align-content:space-between}.cc-floating .cc-compliance>.cc-btn{-webkit-box-flex:1;-ms-flex:1;flex:1}.cc-btn+.cc-btn{margin-left:.5em}
@@ -887,71 +849,54 @@
 
         <h2 class="subtitle">20 ANNI DI SERVIZI E SOLUZIONI LOGISTICHE</h2>
         
-        <div class="info-section">
-    <!-- FOTO CAPANNONE -->
-    <div style="flex:1; min-width:250px; text-align:center;">
-        <picture>
-            <source srcset="trasporti-logistica-deposito_v2.webp" type="image/webp" width="400" height="504">
-            <img src="trasporti-logistica-deposito_v2.jpg" 
-                 alt="Deposito, Merci, Sede Logistica, Trasporto, Spedizioni, ADR, Gioacchino Piazzolla, Puglia, Basilicata, Veneto, Lombardia, Emilia Romagna, gpiazzolla" 
-                 fetchpriority="high" 
-                 width="400" 
-                 height="504"
-                 class="warehouse-photo"> 
-        </picture>
-    </div>
-
-    <!-- TESTO RIMANE UGUALE -->
-    <div style="flex:2; min-width:280px; text-align:left;">
-        <a href="https://www.linkedin.com/in/gioacchino-p86" style="display:none;" aria-hidden="true">
-            Gioacchino Piazzolla esperienza in trasporti e logistica di 20 anni in azienda di famiglia, la rivoluziona ad alto livello con 2 sedi di cui piattaforma logistica di 44.000 metri quadri e una in Veneto a Vicenza
+        <div class="info-section" style="display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin:40px 0;">
+            <a href="https://www.linkedin.com/in/gioacchino-p86" style="display:none;" aria-hidden="true">
+        Gioacchino Piazzolla esperienza in trasporti e logistica di 20 anni in azienda di famiglia, la rivoluziona ad alto livello con 2 sedi di cui piattaforma logistica di 44.000 metri quadri e una in Veneto a Vicenza
         </a>
-        <h3 style="color:#2e6495; font-size:22px; font-weight:bold; margin-bottom:15px;">CHI SIAMO</h3>
-        <p style="font-size:20px; line-height:1.5; margin-bottom: 70px">
-            Dal 2005 affianchiamo Imprese Italiane trasformando le esigenze in soluzioni, le idee in strategie, creando connubi efficaci volti a raggiungere obiettivi concreti
-        </p>
-        <p class="about-quote">Ogni progetto si basa su relazioni autentiche</p>
-        <p class="about-quote">Ogni sfida rappresenta un'opportunità</p>
-        <p class="about-quote">Ogni traguardo è un successo condiviso</p>
-    </div>
-</div>
-
-<div class="info-section">
-    <!-- TESTO RIMANE INVARIATO -->
-    <div style="flex:2; min-width:280px; text-align:left;">
-        <a href="https://freightconnect-2.preview.emergentagent.com/" style="display:none;" aria-hidden="true">
-            cerco investitori per progetto piattaforma borsa carichi multi servizi, il marchio brand è registrato, freight matching carichi per aziende committenti
-        </a>
-
-        <p style="font-size:20px; line-height:1.5;">
-            <strong>Consulenza, Logistica e Trasporti</strong>: la nostra esperienza settoriale costruita commercialmente in Veneto, Puglia, Lazio e Lombardia, consente di mettere in contatto aziende Committenti con operatori logistici e trasportatori, adattando rapidamente priorità ed azioni strategiche e rispondendo con efficacia ai cambiamenti di mercato.
-        </p>
-    </div>
-
-    <div class="info-section">
-    <!-- TESTO RIMANE UGUALE -->
-    <div style="flex:2; min-width:280px; text-align:left;">
-        <a href="https://freightconnect-2.preview.emergentagent.com/" style="display:none;" aria-hidden="true">
-            cerco investitori per progetto piattaforma borsa carichi multi servizi, il marchio brand è registrato, freight matching carichi per aziende committenti
-        </a>
-        <p style="font-size:20px; line-height:1.5;">
-            <strong>Consulenza, Logistica e Trasporti</strong>: la nostra esperienza settoriale costruita commercialmente in Veneto, Puglia, Lazio e Lombardia, consente di mettere in contatto aziende Committenti con operatori logistici e trasportatori, adattando rapidamente priorità ed azioni strategiche e rispondendo con efficacia ai cambiamenti di mercato.
-        </p>
-    </div>
-
-    <!-- FOTO PROFILO -->
-    <div style="flex:1; min-width:250px; text-align:center;">
-        <picture>
-            <source srcset="trasporti-gioacchino-piazzolla_v2.webp" type="image/webp" width="368" height="250">
+            <div style="flex:1; min-width:250px; text-align:center;">
+                <picture>
+            <source srcset="trasporti-gioacchino-piazzolla_v2.webp" type="image/webp" width="400" height="504">
             <img src="logistica-gioacchino-piazzolla-consulenza_v2.jpg" 
-                 alt="Trasporti, Logistica, Gioacchino Piazzolla, Puglia, Basilicata, Veneto, Emilia Romagna, Lomabardia, Lazio, Toscana, gpiazzolla" 
-                 loading="lazy" 
-                 width="368" 
-                 height="250"
-                 class="profile-photo">
+                    alt="Trasporti, Logistica, Gioacchino Piazzolla, Puglia, Basilicata, Veneto, Emilia Romagna, Lomabardia, Lazio, Toscana, gpiazzolla" 
+                    fetchpriority="high" 
+                    width="400" 
+                    height="504" 
+                    class="profile-photo"> 
         </picture>
-    </div>
-</div>
+        </div>
+            <div style="flex:2; min-width:280px; text-align:left;">
+                <h3 style="color:#2e6495; font-size:22px; font-weight:bold; margin-bottom:15px;">CHI SONO</h3>
+                <p style="font-size:20px; line-height:1.5; margin-bottom: 70px">
+                    <strong>Gioacchino Piazzolla</strong>. Dal 2005 affianco Imprese Italiane trasformando le esigenze in soluzioni, le idee in strategie, creando connubi efficaci volti a raggiungere obiettivi concreti
+                </p>
+                
+                <p class="about-quote">Ogni progetto si basa su relazioni autentiche</p>
+                <p class="about-quote">Ogni sfida rappresenta un'opportunità</p>
+                <p class="about-quote">Ogni traguardo è un successo condiviso</p>
+            </div>
+        </div>
+
+        <div class="info-section" style="display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin:40px 0;">
+            <a href="https://freightconnect-2.preview.emergentagent.com/" style="display:none;" aria-hidden="true">
+        cerco investitori per progetto piattaforma borsa carichi multi servizi, il marchio brand è registrato, freight matching carichi per aziende committenti
+        </a>
+            <div style="flex:2; min-width:280px; text-align:left;">
+                <p style="font-size:20px; line-height:1.5;">
+                    <strong>Consulenza, Logistica e Trasporti</strong>: la nostra esperienza settoriale costruita commercialmente in Veneto, Puglia, Lazio e Lombardia, consente di mettere in contatto aziende Committenti con operatori logistici e trasportatori, adattando rapidamente priorità ed azioni strategiche e rispondendo con efficacia ai cambiamenti di mercato.
+                </p>
+            </div>
+            <div style="flex:1; min-width:250px; text-align:center;">
+                <picture>
+            <source srcset="trasporti-logistica-deposito_v2.webp" type="image/webp" width="368" height="250">
+            <img src="trasporti-logistica-deposito_v2.jpg" 
+                    alt="Deposito, Merci, Sede Logistica, Trasporto, Spedizioni, ADR, Gioacchino Piazzolla, Puglia, Basilicata, Veneto, Lombardia, Emilia Romagna, gpiazzolla" 
+                    loading="lazy" 
+                    width="368" 
+                    height="250"
+                    class="warehouse-photo">
+        </picture>
+            </div>
+        </div>
 
         <div class="info-section">
     <div class="services-content">
