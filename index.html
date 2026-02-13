@@ -655,20 +655,23 @@
     }
     .profile-photo {
     width: 100%; 
-    max-width: 320px; /* Max-width che avevi nello style inline */
-    height: auto; 
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Ombra che avevi nello style inline */
-    pointer-events: none;
-}
-    .warehouse-photo {
-    width: 100%; 
-    max-width: 320px; /* Max-width che avevi nello style inline */
-    height: auto;
+    max-width: 320px;       /* mantiene il limite di larghezza */
+    height: 100%;           /* <--- cambia da auto a 100% */
+    object-fit: cover;      /* mantiene le proporzioni riempiendo il contenitore */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     pointer-events: none;
+    display: block;
+}
+    .warehouse-photo {
+    width: 100%; 
+    max-width: 320px;       /* mantiene il limite di larghezza */
+    height: 100%;           /* <--- cambia da auto a 100% */
+    object-fit: cover;      /* mantiene le proporzioni riempiendo il contenitore */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    pointer-events: none;
+    display: block;
 }
     .info-section {
       margin: 40px 0;
