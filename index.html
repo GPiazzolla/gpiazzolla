@@ -938,26 +938,23 @@
     </div>
 </div>
 
-        <div class="info-section">
-            <h3>CONTATTI</h3>
-            <p><span id="tel1"></span> - <span id="tel2"></span></p>
-            <p><span id="mail1"></span></p>
-            <p>Uffici: <span id="tel2"></span></p>
-            <p>Mobile Aziendale: <span id="tel1"></span></p>
-            <p>Mail: <span id="mail1"></span></p>
-          <div class="info-section">
-            
-        <div style="margin-top: 10px;">
-            <a href="https://www.linkedin.com/in/gioacchino-p86" target="_blank"
-                style="display: inline-flex; align-items: center; background-color: #0077B5; color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; font-family: Arial, sans-serif; font-size: 14px;">
-                
+        <div class="info-section" style="width: 100%; clear: both;">
+    <h3 style="margin-bottom: 15px;">CONTATTI</h3>
+    
+    <p style="margin: 8px 0;">UFFICIO: <span id="tel2"></span></p>
+    <p style="margin: 8px 0;">MOBILE AZIENDALE: <span id="tel1"></span></p>
+    <p style="margin: 8px 0;">MAIL: <span id="mail1"></span></p>
+    
+    <div style="margin-top: 15px;">
+        <a href="https://www.linkedin.com/in/gioacchino-p86" target="_blank"
+            style="display: inline-flex; align-items: center; background-color: #0077B5; color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; font-family: Arial, sans-serif; font-size: 14px;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="white" style="margin-right: 8px;">
                 <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.04 8.98h4.92v14.02H.04V8.98zM7.98 8.98h4.72v1.92h.07c.66-1.25 2.27-2.56 4.66-2.56 4.99 0 5.91 3.3 5.91 7.58v8.08h-4.92v-7.16c0-1.7-.03-3.9-2.38-3.9-2.39 0-2.75 1.86-2.75 3.78v7.28H7.98V8.98z"/>
             </svg>
             LinkedIn
-            </a>
-        </div>
-        </div>
+        </a>
+    </div>
+</div>
 
         <div class="info-section">
             <h3>ORARI LAVORATIVI</h3>
@@ -1046,18 +1043,19 @@
     </script>
     
     <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            // telefoni
-            var tel1 = "366 3279958";
-            var tel2 = "0883 1950801";
-            document.getElementById("tel1").innerHTML = '<a href="tel:' + tel1.replace(/\s+/g,"") + '" style="text-decoration: none;">' + tel1 + '</a>';
-            document.getElementById("tel2").innerHTML = '<a href="tel:' + tel2.replace(/\s+/g,"") + '" style="text-decoration: none;">' + tel2 + '</a>';
+    document.addEventListener("DOMContentLoaded", function(){
+        var telMobile = "366 3279958";
+        var telUfficio = "0883 1950801";
+        var emailContatto = "logistica" + "@" + "gpiazzolla.com";
 
-            // email
-            var e1 = "logistica" + "@" + "gpiazzolla.com";
-            document.getElementById("mail1").innerHTML = '<a href="mailto:' + e1 + '" style="text-decoration: none;">' + e1 + '</a>';
-        });
-    </script>
+        // Inserimento dati con stile per i link
+        var linkStyle = 'style="text-decoration: none; color: inherit;"';
+        
+        document.getElementById("tel2").innerHTML = '<a href="tel:' + telUfficio.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telUfficio + '</a>';
+        document.getElementById("tel1").innerHTML = '<a href="tel:' + telMobile.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telMobile + '</a>';
+        document.getElementById("mail1").innerHTML = '<a href="mailto:' + emailContatto + '" ' + linkStyle + '>' + emailContatto + '</a>';
+    });
+</script>
 
     <script>
         window.addEventListener("load", function(){
