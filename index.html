@@ -668,13 +668,13 @@
     width: 100%;
     max-width: 368px;
     aspect-ratio: 368 / 250;
-    height: auto;
-    object-fit: contain;    /* <-- qui */
+    height: 100%;
+    object-fit: cover;      /* Riempe il contenitore */
+    object-position: center; /* Centra l’immagine visibile */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     pointer-events: none;
     display: block;
-    background-color: #fff; /* sfondo bianco se non riempie tutto */
 }
     .info-section {
       margin: 40px 0;
