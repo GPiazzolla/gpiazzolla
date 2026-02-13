@@ -655,9 +655,9 @@
     }
     .profile-photo {
     width: 100%; 
-    max-width: 320px;       /* mantiene il limite di larghezza */
-    height: 100%;           /* <--- cambia da auto a 100% */
-    object-fit: cover;      /* mantiene le proporzioni riempiendo il contenitore */
+    max-width: 320px;       /* mantiene la larghezza massima */
+    height: 100%;           /* adatta l’altezza del contenitore */
+    object-fit: cover;      /* mantiene proporzioni riempiendo lo spazio */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     pointer-events: none;
@@ -665,9 +665,9 @@
 }
     .warehouse-photo {
     width: 100%; 
-    max-width: 320px;       /* mantiene il limite di larghezza */
-    height: 100%;           /* <--- cambia da auto a 100% */
-    object-fit: cover;      /* mantiene le proporzioni riempiendo il contenitore */
+    max-width: 320px;       /* mantiene la larghezza massima */
+    height: 100%;           /* adatta l’altezza del contenitore */
+    object-fit: cover;      /* mantiene proporzioni riempiendo lo spazio */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     pointer-events: none;
@@ -851,11 +851,12 @@
         </div>
 
         <h2 class="subtitle">20 ANNI DI SERVIZI E SOLUZIONI LOGISTICHE</h2>
+      
         <div class="info-section" style="display:flex; flex-wrap:wrap; align-items:center; gap:20px; margin:40px 0;">
     <a href="https://www.linkedin.com/in/gioacchino-p86" style="display:none;" aria-hidden="true">
         Gioacchino Piazzolla esperienza in trasporti e logistica di 20 anni in azienda di famiglia, la rivoluziona ad alto livello con 2 sedi di cui piattaforma logistica di 44.000 metri quadri e una in Veneto a Vicenza
     </a>
-    <div style="flex:1; min-width:250px; text-align:center;">
+    <div style="flex:1; min-width:250px; text-align:center; display:flex; align-items:center; height:100%;">
         <picture>
             <source srcset="trasporti-logistica-deposito_v2.webp" type="image/webp" width="400" height="504">
             <img src="trasporti-logistica-deposito_v2.jpg" 
@@ -866,7 +867,7 @@
                  class="warehouse-photo"> 
         </picture>
     </div>
-    <div style="flex:2; min-width:280px; text-align:left;">
+    <div style="flex:2; min-width:280px; text-align:left; display:flex; flex-direction:column; justify-content:flex-start; height:100%;">
         <h3 style="color:#2e6495; font-size:22px; font-weight:bold; margin-bottom:15px;">CHI SONO</h3>
         <p style="font-size:20px; line-height:1.5; margin-bottom: 70px">
             <strong>Gioacchino Piazzolla</strong>. Dal 2005 affianco Imprese Italiane trasformando le esigenze in soluzioni, le idee in strategie, creando connubi efficaci volti a raggiungere obiettivi concreti
