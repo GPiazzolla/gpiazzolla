@@ -415,27 +415,21 @@
     </div>
 </section>
 
-<section id="contatti" style="background: #004270; padding: 60px 5%; border-radius: 30px 30px 0 0; color: white; font-family: sans-serif;">
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto;">
+<section id="contatti" style="background: #004270; padding: 40px 5%; border-radius: 30px 30px 0 0; color: white; font-family: sans-serif;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px;">
         
-        <div style="flex: 1; min-width: 280px;">
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; border-bottom: 3px solid #f97216; display: inline-block; padding-bottom: 10px; text-transform: uppercase;">Contatti</h3>
-            <div id="contatti-footer-id" style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
+        <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid #f97216; display: inline-block; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Contatti</h4>
+            <div id="contatti-footer-id" style="display: flex; flex-direction: column; gap: 10px;">
                 </div>
         </div>
 
-        <div style="flex: 1; min-width: 280px;">
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; border-bottom: 3px solid #f97216; display: inline-block; padding-bottom: 10px; text-transform: uppercase;">Orari Lavorativi</h3>
-            <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 1.1rem;">
-                <p style="margin: 0; display: flex; gap: 10px;">
-                    <span style="width: 90px; font-weight: 700;">Lun \ Ven</span> <span>08:00 - 19:00</span>
-                </p>
-                <p style="margin: 0; display: flex; gap: 10px;">
-                    <span style="width: 90px; font-weight: 700;">Sabato</span> <span>08:00 - 12:00</span>
-                </p>
-                <p style="margin: 0; display: flex; gap: 10px;">
-                    <span style="width: 90px; font-weight: 700; color: #f97216;">Festivi</span> <span style="font-style: italic;">Su richiesta</span>
-                </p>
+        <div style="flex: 1; min-width: 250px;">
+            <h4 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid #f97216; display: inline-block; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Orari Lavorativi</h4>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 1rem;">
+                <p style="margin: 0;"><strong>Lun \ Ven:</strong> 08:00 - 19:00</p>
+                <p style="margin: 0;"><strong>Sabato:</strong> 08:00 - 12:00</p>
+                <p style="margin: 0;"><strong style="color: #f97216;">Festivi:</strong> <span style="font-style: italic; opacity: 0.9;">Su richiesta</span></p>
             </div>
         </div>
         
@@ -474,27 +468,24 @@
 
   <script>
 (function() {
-    const p1 = "0883";
-    const p2 = "1950801";
-    const m1 = "366";
-    const m2 = "3279958";
-    const e1 = "logistica";
-    const e2 = "gpiazzolla.com";
+    const p1 = "0883", p2 = "1950801";
+    const m1 = "366", m2 = "3279958";
+    const e1 = "logistica", e2 = "gpiazzolla.com";
     
     const target = document.getElementById('contatti-footer-id');
     if(target) {
         target.innerHTML = `
-            <p style="margin: 0; font-size: 1.1rem;">
-                <strong style="color: #f97216;">Ufficio:</strong> 
-                <a href="tel:${p1}${p2}" style="color: white; text-decoration: none;">${p1} ${p2}</a>
+            <p style="margin:0; font-size:1rem;">
+                <span style="color:#f97216; font-weight:700;">Uffici:</span> 
+                <a href="tel:${p1}${p2}" style="color:white; text-decoration:none;">${p1} ${p2}</a>
             </p>
-            <p style="margin: 0; font-size: 1.1rem;">
-                <strong style="color: #f97216;">Mobile:</strong> 
-                <a href="tel:${m1}${m2}" style="color: white; text-decoration: none;">${m1} ${m2}</a>
+            <p style="margin:0; font-size:1rem;">
+                <span style="color:#f97216; font-weight:700;">Mobile:</span> 
+                <a href="tel:${m1}${m2}" style="color:white; text-decoration:none;">${m1} ${m2}</a>
             </p>
-            <p style="margin: 0; font-size: 1.1rem;">
-                <strong style="color: #f97216;">E-mail:</strong> 
-                <a href="mailto:${e1}@${e2}" style="color: white; text-decoration: none;">${e1}@${e2}</a>
+            <p style="margin:0; font-size:1rem;">
+                <span style="color:#f97216; font-weight:700;">E-mail:</span> 
+                <a href="mailto:${e1}@${e2}" style="color:white; text-decoration:none;">${e1}@${e2}</a>
             </p>
         `;
     }
@@ -596,6 +587,7 @@
 </body>
 
 </html>
+
 
 
 
