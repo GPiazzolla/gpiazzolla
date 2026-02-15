@@ -243,59 +243,64 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRP5J6RM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
-    <header class="site-header" style="padding: 5px 2%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 2px solid #f4f7f9; height: 80px; box-sizing: border-box;">
+    <header class="site-header" style="padding: 10px 2%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 2px solid #f4f7f9; min-height: 90px; box-sizing: border-box;">
     
     <div class="brand-box" style="display: flex; align-items: center; gap: 15px;">
-        <img src="gpiazzolla_v2.jpg" alt="Logo" class="brand-logo-img" style="width: 250px; height: auto; display: block;">
-        <div class="brand-text" style="border-left: 1px solid #eee; padding-left: 15px; display: flex; flex-direction: column; justify-content: center;">
-            <h1 style="margin: 0; font-size: 1.1rem; color: #004270; font-weight: 800; font-family: 'Inter', sans-serif; line-height: 1.2;">GIOACCHINO PIAZZOLLA</h1>
-            <small style="color: #666; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">CONSULENZA | LOGISTICA | TRASPORTI</small>
+        <img src="gpiazzolla_v2.jpg" alt="Logo" style="width: 220px; height: auto; display: block;">
+        <div class="brand-text" style="border-left: 1px solid #ddd; padding-left: 15px;">
+            <h1 style="margin: 0; font-size: 1.1rem; color: #004270; font-weight: 800; font-family: 'Inter', sans-serif;">GIOACCHINO PIAZZOLLA</h1>
+            <small style="color: #666; font-size: 0.65rem; font-weight: 600; display: block; margin-top: 2px;">CONSULENZA | LOGISTICA | TRASPORTI</small>
         </div>
     </div>
 
-    <div class="header-contacts" style="display: flex; flex-direction: column; gap: 2px; font-family: 'Inter', sans-serif; margin-left: auto; margin-right: 30px;">
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-            <span style="font-size: 0.6rem; color: #999; font-weight: 700; text-transform: uppercase; width: 45px;">Ufficio</span>
-            <a href="tel:+3908831950801" style="display: flex; align-items: center; text-decoration: none; color: #3e3f41; font-weight: 700; font-size: 0.9rem;">
-                <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" alt="tel" style="width: 14px; height: 14px; margin-right: 5px;">
-                0883 1950801
-            </a>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 8px;">
-            <span style="font-size: 0.6rem; color: #999; font-weight: 700; text-transform: uppercase; width: 45px;">Mobile</span>
-            <div style="display: flex; align-items: center; gap: 4px; margin-right: 2px;">
-                <a href="tel:+393663279958"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" alt="tel" style="width: 14px; height: 14px;"></a>
-                <a href="https://wa.me/393663279958"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" style="width: 15px; height: 15px;"></a>
-            </div>
-            <a href="tel:+393663279958" style="text-decoration: none; color: #3e3f41; font-weight: 700; font-size: 0.9rem;">366 3279958</a>
-        </div>
+    <div style="margin-left: auto; margin-right: 40px; font-family: 'Inter', sans-serif;">
+        <table style="border-spacing: 0; border-collapse: collapse;">
+            <tr>
+                <td style="font-size: 0.6rem; color: #999; font-weight: 700; text-transform: uppercase; padding-right: 10px; text-align: left;">UFFICIO</td>
+                <td style="padding-right: 8px; vertical-align: middle;">
+                    <a href="tel:+3908831950801"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px; display: block;"></a>
+                </td>
+                <td>
+                    <a href="tel:+3908831950801" style="text-decoration: none; color: #3e3f41; font-weight: 700; font-size: 0.95rem; white-space: nowrap;">0883 1950801</a>
+                </td>
+            </tr>
+            <tr><td colspan="3" style="height: 5px;"></td></tr>
+            <tr>
+                <td style="font-size: 0.6rem; color: #999; font-weight: 700; text-transform: uppercase; padding-right: 10px; text-align: left;">MOBILE</td>
+                <td style="padding-right: 8px; vertical-align: middle; display: flex; gap: 4px; align-items: center;">
+                    <a href="tel:+393663279958"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;"></a>
+                    <a href="https://wa.me/393663279958"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 15px; height: 15px;"></a>
+                </td>
+                <td>
+                    <a href="tel:+393663279958" style="text-decoration: none; color: #3e3f41; font-weight: 700; font-size: 0.95rem; white-space: nowrap;">366 3279958</a>
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
+    <div class="nav-actions" style="display: flex; gap: 12px;">
         <style>
             .header-btn {
                 display: inline-block;
-                width: 170px; /* Dimensione fissa per entrambi */
-                padding: 8px 0;
+                width: 175px;
+                padding: 10px 0;
                 text-align: center;
                 font-size: 0.8rem;
                 font-weight: 700;
                 border-radius: 5px;
                 text-decoration: none;
-                transition: all 0.3s ease;
+                transition: all 0.2s;
                 font-family: 'Inter', sans-serif;
                 border: 2px solid #f97216;
             }
-            .btn-outline { color: #f97216; background: #fff; }
-            .btn-outline:hover { background: #f97216; color: #fff; }
-            
-            .btn-solid { background: #f97216; color: #fff; }
-            .btn-solid:hover { background: transparent; color: #f97216; }
+            .btn-mail { color: #f97216; background: #fff; }
+            .btn-mail:hover { background: #f97216; color: #fff; }
+            .btn-preventivo { background: #f97216; color: #fff; }
+            .btn-preventivo:hover { background: #fff; color: #f97216; }
         </style>
-        <a href="https://freightconnect-2.preview.emergentagent.com/" class="header-btn btn-outline" target="_blank">DOVECARICO™</a>
-        <a href="#contact-form" class="header-btn btn-solid">RICHIEDI PREVENTIVO</a>
+        <a href="https://freightconnect-2.preview.emergentagent.com/" class="header-btn btn-mail" target="_blank">DOVECARICO™</a>
+        <a href="#contact-form" class="header-btn btn-preventivo">RICHIEDI PREVENTIVO</a>
     </div>
-
 </header>
   
     <main class="container">
@@ -457,6 +462,7 @@
 </body>
 
 </html>
+
 
 
 
