@@ -258,25 +258,22 @@
             <tr>
                 <td style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">UFFICIO</td>
                 <td style="width: 42px; vertical-align: middle; text-align: left;">
-                    <a href="tel:+3908831950801" style="line-height: 0; display: inline-block;">
-                        <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;">
-                    </a>
+                    <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;">
                 </td>
-                <td style="text-align: right;">
-                    <a href="tel:+3908831950801" style="text-decoration: none; color: #3e3f41; font-weight: 700; font-size: 0.95rem; white-space: nowrap;">0883 1950801</a>
-                </td>
+                <td id="tel2" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
+                    </td>
             </tr>
-            <tr><td colspan="3" style="height: 2px;"></td></tr> <tr>
+            <tr><td colspan="3" style="height: 2px;"></td></tr>
+            <tr>
                 <td style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">MOBILE</td>
                 <td style="width: 42px; vertical-align: middle; text-align: left;">
                     <div style="display: flex; gap: 5px; align-items: center; line-height: 0;">
-                        <a href="tel:+393663279958" style="line-height: 0;"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;"></a>
+                        <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;">
                         <a href="https://wa.me/393663279958" target="_blank" style="line-height: 0;"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 15px; height: 15px;"></a>
                     </div>
                 </td>
-                <td style="text-align: right;">
-                    <a href="tel:+393663279958" style="text-decoration: none; color: #3e3f41; font-weight: 700; font-size: 0.95rem; white-space: nowrap;">366 3279958</a>
-                </td>
+                <td id="tel1" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
+                    </td>
             </tr>
         </table>
     </div>
@@ -289,7 +286,7 @@
             .btn-info { color: #f97216; border-color: #f97216; }
             .btn-info:hover { background: #f97216; color: #fff; }
         </style>
-        <a href="mailto:info@gpiazzolla.com" class="header-btn btn-mail">SCRIVICI VIA MAIL</a>
+        <a id="mail-link" href="#" class="header-btn btn-mail">SCRIVICI VIA MAIL</a>
         <a href="#contact-form" class="header-btn btn-info">RICHIEDI INFORMAZIONI</a>
     </div>
 </header>
@@ -400,16 +397,19 @@
         var telUfficio = "0883 1950801";
         var emailContatto = "logistica" + "@" + "gpiazzolla.com";
 
-        // linkStyle sistemato con virgoletta di chiusura e colore blu forzato
-        var linkStyle = 'style="text-decoration: none; color: #0000EE;"';
+        // Style per i numeri (grigio scuro, grassetto, niente sottolineatura)
+        var linkStyle = 'style="text-decoration: none; color: #3e3f41; font-weight: 700;"';
         
         var t2 = document.getElementById("tel2");
         var t1 = document.getElementById("tel1");
         var m1 = document.getElementById("mail1");
 
+        // Inserimento nei numeri nella tabella
         if(t2) t2.innerHTML = '<a href="tel:' + telUfficio.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telUfficio + '</a>';
         if(t1) t1.innerHTML = '<a href="tel:' + telMobile.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telMobile + '</a>';
-        if(m1) m1.innerHTML = '<a href="mailto:' + emailContatto + '" ' + linkStyle + '>' + emailContatto + '</a>';
+        
+        // Inserimento del tasto Mail protetto
+        if(m1) m1.innerHTML = '<a href="mailto:' + emailContatto + '" class="header-btn btn-mail">SCRIVICI VIA MAIL</a>';
     })();
 </script>
 
@@ -453,6 +453,7 @@
 </body>
 
 </html>
+
 
 
 
