@@ -243,7 +243,7 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRP5J6RM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
-    <header class="site-header" style="width: 100%; padding: 10px 2%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 2px solid #f4f7f9; box-sizing: border-box; font-family: 'Inter', sans-serif;">
+    <header class="site-header" style="width: 100%; padding: 8px 2%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 2px solid #f4f7f9; box-sizing: border-box; font-family: 'Inter', sans-serif;">
     
     <a href="https://gpiazzolla.com" style="text-decoration: none; display: flex; align-items: center; gap: 18px;">
         <img src="gpiazzolla_v2.jpg" alt="Logo" style="width: 220px; height: auto; display: block;">
@@ -272,7 +272,7 @@
                 <td style="width: 42px; vertical-align: middle; text-align: left;">
                     <div style="display: flex; gap: 5px; align-items: center; line-height: 0;">
                         <a href="tel:+393663279958" style="line-height: 0;"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;"></a>
-                        <a href="https://wa.me/393663279958" style="line-height: 0;"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 15px; height: 15px;"></a>
+                        <a href="https://wa.me/393663279958" target="_blank" style="line-height: 0;"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 15px; height: 15px;"></a>
                     </div>
                 </td>
                 <td style="text-align: right;">
@@ -284,13 +284,15 @@
 
     <div class="nav-actions" style="display: flex; gap: 10px;">
         <style>
-            .header-btn { display: inline-block; width: 175px; padding: 9px 0; text-align: center; font-size: 0.75rem; font-weight: 800; border-radius: 5px; text-decoration: none; transition: all 0.2s; border: 2px solid transparent; text-transform: uppercase; }
-            /* Tasto Mail - Blu come il logo */
-            .btn-mail { background: #004270; color: #fff; border-color: #004270; }
-            .btn-mail:hover { background: #fff; color: #004270; }
-            /* Tasto Info - Arancione */
-            .btn-info { background: #f97216; color: #fff; border-color: #f97216; }
-            .btn-info:hover { background: #fff; color: #f97216; }
+            .header-btn { display: inline-block; width: 175px; padding: 8px 0; text-align: center; font-size: 0.75rem; font-weight: 800; border-radius: 5px; text-decoration: none; transition: all 0.3s; border: 2px solid; text-transform: uppercase; background: #fff; }
+            
+            /* Tasto Mail - Bordo Blu, riempie in Blu */
+            .btn-mail { color: #004270; border-color: #004270; }
+            .btn-mail:hover { background: #004270; color: #fff; }
+            
+            /* Tasto Info - Bordo Arancio, riempie in Arancio */
+            .btn-info { color: #f97216; border-color: #f97216; }
+            .btn-info:hover { background: #f97216; color: #fff; }
         </style>
         <a href="mailto:info@gpiazzolla.com" class="header-btn btn-mail">SCRIVICI VIA MAIL</a>
         <a href="#contact-form" class="header-btn btn-info">RICHIEDI INFORMAZIONI</a>
@@ -456,6 +458,7 @@
 </body>
 
 </html>
+
 
 
 
