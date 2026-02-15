@@ -415,31 +415,36 @@
     </div>
 </section>
 
-<section id="contatti-sezione" style="background: #004270; padding: 80px 5%; border-radius: 40px 40px 0 0; color: white; font-family: sans-serif;">
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+<section id="contatti" style="background: #004270; padding: 60px 5%; border-radius: 30px 30px 0 0; color: white; font-family: sans-serif;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto;">
         
-        <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 30px; color: #f97216; text-transform: uppercase; border-left: 5px solid #f97216; padding-left: 15px;">Contatti</h3>
-            
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div id="contatti-footer-id"></div>
-            </div>
+        <div style="flex: 1; min-width: 280px;">
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; border-bottom: 3px solid #f97216; display: inline-block; padding-bottom: 10px; text-transform: uppercase;">Contatti</h3>
+            <div id="contatti-footer-id" style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
+                </div>
         </div>
 
-        <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-            <h4 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 30px; color: #f97216; text-transform: uppercase; border-left: 5px solid #f97216; padding-left: 15px;">Orari Lavorativi</h4>
-            <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1.1rem;">
-                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
-                    <span>Lunedì - Venerdì</span><span style="font-weight: 700;">08:00 - 19:00</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
-                    <span>Sabato</span><span style="font-weight: 700;">08:00 - 12:00</span>
-                </div>
-                <div style="display: flex; justify-content: space-between;">
-                    <span>Festivi</span><span style="font-style: italic; color: #f97216;">Su richiesta</span>
+        <div style="flex: 1; min-width: 280px;">
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; border-bottom: 3px solid #f97216; display: inline-block; padding-bottom: 10px; text-transform: uppercase;">Orari Lavorativi</h3>
+            <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 1.1rem;">
+                <p style="margin: 0; display: flex; gap: 10px;">
+                    <span style="width: 90px; font-weight: 700;">Lun \ Ven</span> <span>08:00 - 19:00</span>
+                </p>
+                <p style="margin: 0; display: flex; gap: 10px;">
+                    <span style="width: 90px; font-weight: 700;">Sabato</span> <span>08:00 - 12:00</span>
+                </p>
+                <p style="margin: 0; display: flex; gap: 10px;">
+                    <span style="width: 90px; font-weight: 700; color: #f97216;">Festivi</span> <span style="font-style: italic;">Su richiesta</span>
+                </p>
+                
+                <div style="margin-top: 20px;">
+                    <a href="https://www.linkedin.com/in/gioacchino-piazzolla-5290b05b/" target="_blank" style="display: inline-flex; align-items: center; background: #0077b5; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none; font-weight: 700; gap: 10px; font-size: 0.9rem;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width: 16px; filter: brightness(0) invert(1);" alt="LinkedIn"> CONNETTITI
+                    </a>
                 </div>
             </div>
         </div>
+        
     </div>
 </section>
       
@@ -474,7 +479,6 @@
     </footer>
 
   <script>
-// Protezione bot specifica per il footer
 (function() {
     const p1 = "0883";
     const p2 = "1950801";
@@ -486,18 +490,18 @@
     const target = document.getElementById('contatti-footer-id');
     if(target) {
         target.innerHTML = `
-            <a href="tel:${p1}${p2}" style="text-decoration:none; color:white; display:flex; align-items:center; gap:15px; margin-bottom:20px;">
-                <div style="background:#f97216; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center;">📞</div>
-                <div><span style="display:block; font-size:0.8rem; opacity:0.7;">UFFICIO</span><strong>${p1} ${p2}</strong></div>
-            </a>
-            <a href="tel:${m1}${m2}" style="text-decoration:none; color:white; display:flex; align-items:center; gap:15px; margin-bottom:20px;">
-                <div style="background:#f97216; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center;">📱</div>
-                <div><span style="display:block; font-size:0.8rem; opacity:0.7;">MOBILE</span><strong>${m1} ${m2}</strong></div>
-            </a>
-            <a href="mailto:${e1}@${e2}" style="text-decoration:none; color:white; display:flex; align-items:center; gap:15px;">
-                <div style="background:#f97216; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center;">✉️</div>
-                <div><span style="display:block; font-size:0.8rem; opacity:0.7;">E-MAIL</span><strong>${e1}@${e2}</strong></div>
-            </a>
+            <p style="margin: 0; font-size: 1.1rem;">
+                <strong style="color: #f97216;">Ufficio:</strong> 
+                <a href="tel:${p1}${p2}" style="color: white; text-decoration: none;">${p1} ${p2}</a>
+            </p>
+            <p style="margin: 0; font-size: 1.1rem;">
+                <strong style="color: #f97216;">Mobile:</strong> 
+                <a href="tel:${m1}${m2}" style="color: white; text-decoration: none;">${m1} ${m2}</a>
+            </p>
+            <p style="margin: 0; font-size: 1.1rem;">
+                <strong style="color: #f97216;">E-mail:</strong> 
+                <a href="mailto:${e1}@${e2}" style="color: white; text-decoration: none;">${e1}@${e2}</a>
+            </p>
         `;
     }
 })();
@@ -598,6 +602,7 @@
 </body>
 
 </html>
+
 
 
 
