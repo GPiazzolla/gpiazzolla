@@ -1122,7 +1122,7 @@ html {
     const mob = "3663279958";
     const mail = "logistica" + "@" + "gpiazzolla.com";
     
-    // Inserisce i dati nei placeholder della sezione contatti
+    // SEZIONE CONTATTI (Quella blu con la griglia)
     const tUff = document.getElementById('tel-uff-placeholder');
     const tMob = document.getElementById('tel-mob-placeholder');
     const tMail = document.getElementById('mail-placeholder');
@@ -1131,11 +1131,18 @@ html {
     if(tMob) tMob.innerHTML = `<a href="tel:${mob}" style="color:white; text-decoration:none;">366 3279958</a>`;
     if(tMail) tMail.innerHTML = `<a href="mailto:${mail}" style="color:white; text-decoration:none;">${mail}</a>`;
 
-    // Aggiorna anche gli ID nel footer (PEC e altri link)
-    const m1 = document.getElementById("mail-link"); // Il link PEC nel footer
-    if(m1) {
-        m1.setAttribute("href", "mailto:" + mail);
-        m1.innerHTML = mail;
+    // FOOTER (PEC) - Qui usiamo innerHTML perché è testo semplice
+    const mFooter = document.getElementById("mail-link-footer"); 
+    if(mFooter) {
+        mFooter.setAttribute("href", "mailto:" + mail);
+        mFooter.innerHTML = mail;
+    }
+
+    // HEADER (IL TASTO) - Cambiamo solo il link, NON tocchiamo il testo o le icone
+    const mHeader = document.getElementById("mail-link"); 
+    if(mHeader) {
+        mHeader.setAttribute("href", "mailto:" + mail);
+        // NON facciamo innerHTML, così il tasto resta identico a prima
     }
 })();
 </script>
@@ -1232,6 +1239,7 @@ html {
 </body>
 
 </html>
+
 
 
 
