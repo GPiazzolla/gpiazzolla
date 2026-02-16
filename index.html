@@ -1108,181 +1108,126 @@ html {
         style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; border: 2px solid #f97216; background: #004270; color: white; width: 50px; height: 50px; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); align-items: center; justify-content: center;">
     <span style="border: solid white; border-width: 0 3px 3px 0; display: inline-block; padding: 5px; transform: rotate(-135deg); margin-top: 3px;"></span>
 </button>
-  
-  <script>
-// SCRIPT ORIGINALE PROTETTO
+
+<script>
 (function() {
-    const uff = "0883" + "1950801";
-    const mob = "366" + "3279958";
+    const uff = "08831950801";
+    const mob = "3663279958";
     const mail = "logistica" + "@" + "gpiazzolla.com";
     
+    // Inserimento nei recapiti protetti (se presenti)
     const target = document.getElementById('recapiti-protetti');
     if(target) {
         target.innerHTML = `
-            <span style="color:#f97216; font-weight:700;">Uffici:</span> 
-            <a href="tel:${uff}" style="color:white; text-decoration:none;">${uff}</a>
-            
-            <span style="color:#f97216; font-weight:700;">Mobile:</span> 
-            <a href="tel:${mob}" style="color:white; text-decoration:none;">${mob}</a>
-            
-            <span style="color:#f97216; font-weight:700;">E-mail:</span> 
-            <a href="mailto:${mail}" style="color:white; text-decoration:none;">${mail}</a>
+            <span style="color:#f97216; font-weight:700;">Uffici:</span> <a href="tel:${uff}" style="color:white; text-decoration:none;">0883 1950801</a> | 
+            <span style="color:#f97216; font-weight:700;">Mobile:</span> <a href="tel:${mob}" style="color:white; text-decoration:none;">366 3279958</a> | 
+            <span style="color:#f97216; font-weight:700;">E-mail:</span> <a href="mailto:${mail}" style="color:white; text-decoration:none;">${mail}</a>
         `;
     }
+
+    // Aggiornamento link sparsi (tel1, tel2, mail-link)
+    const t1 = document.getElementById("tel1");
+    const t2 = document.getElementById("tel2");
+    const m1 = document.getElementById("mail-link");
+    if(t1) t1.innerHTML = `<a href="tel:${mob}" style="text-decoration:none; color:inherit; font-weight:700;">366 3279958</a>`;
+    if(t2) t2.innerHTML = `<a href="tel:${uff}" style="text-decoration:none; color:inherit; font-weight:700;">0883 1950801</a>`;
+    if(m1) m1.setAttribute("href", "mailto:" + mail);
 })();
 </script>
 
-    <script>
+<script>
     const form = document.getElementById("contactForm");
-    const status = document.getElementById("form-status");
-    const btn = document.getElementById("submit-btn");
-
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault(); // Ferma il ricaricamento della pagina
-        
-        // Feedback visivo immediato (disabilita bottone)
-        btn.disabled = true;
-        btn.innerHTML = "INVIO IN CORSO...";
-        
-        const data = new FormData(form);
-
-        try {
-            let response = await fetch(form.action, {
-                method: form.method,
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-
-            if (response.ok) {
-                // SUCCESSO
+    if(form) {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const status = document.getElementById("form-status");
+            const btn = document.getElementById("submit-btn");
+            
+            btn.disabled = true;
+            btn.innerHTML = "INVIO IN CORSO...";
+            
+            const data = new FormData(form);
+            try {
+                let response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    status.style.display = "block";
+                    status.style.backgroundColor = "#d4edda";
+                    status.style.color = "#155724";
+                    status.innerHTML = "✅ Richiesta inviata con successo!";
+                    form.reset();
+                    btn.innerHTML = "INVIATO";
+                    setTimeout(() => { btn.disabled = false; btn.innerHTML = "INVIA RICHIESTA"; status.style.display = "none"; }, 5000);
+                } else { throw new Error(); }
+            } catch (error) {
                 status.style.display = "block";
-                status.style.backgroundColor = "#d4edda"; // Verde chiaro sfondo
-                status.style.color = "#155724"; // Verde scuro testo
-                status.innerHTML = "✅ La tua richiesta è stata inviata! Ti contatteremo nel più breve tempo possibile";
-                form.reset(); // Pulisce i campi
-                btn.innerHTML = "INVIATO";
-                
-                // Opzionale: rimette il bottone normale dopo 5 secondi
-                setTimeout(() => {
-                    btn.disabled = false;
-                    btn.innerHTML = "INVIA RICHIESTA";
-                    status.style.display = "none";
-                }, 5000);
-
-            } else {
-                // ERRORE LATO SERVER
-                let err = await response.json();
-                throw new Error('Errore server');
+                status.style.backgroundColor = "#f8d7da";
+                status.style.color = "#721c24";
+                status.innerHTML = "❌ Errore. Riprova o scrivici via mail.";
+                btn.disabled = false;
+                btn.innerHTML = "RI-INVIA";
             }
-        } catch (error) {
-            // ERRORE GENERICO / CONNESSIONE
-            status.style.display = "block";
-            status.style.backgroundColor = "#f8d7da"; // Rosso chiaro sfondo
-            status.style.color = "#721c24"; // Rosso scuro testo
-            status.innerHTML = "❌ Si è verificato un errore. Per favore riprova, chiamaci o scrivici direttamente via email.";
-            btn.disabled = false;
-            btn.innerHTML = "RI-INVIA RICHIESTA";
-        }
-    });
-</script>
-    
-    <script>
-    (function() {
-        var telMobile = "366 3279958";
-        var telUfficio = "0883 1950801";
-        var emailContatto = "logistica" + "@" + "gpiazzolla.com";
-
-        var linkStyle = 'style="text-decoration: none; color: #3e3f41; font-weight: 700;"';
-        
-        var t2 = document.getElementById("tel2");
-        var t1 = document.getElementById("tel1");
-        var m1 = document.getElementById("mail-link");
-
-        // Aggiorna solo il testo/link dei numeri se presenti
-        if(t2) t2.innerHTML = '<a href="tel:' + telUfficio.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telUfficio + '</a>';
-        if(t1) t1.innerHTML = '<a href="tel:' + telMobile.replace(/\s+/g,"") + '" ' + linkStyle + '>' + telMobile + '</a>';
-        
-        // Aggiorna l'indirizzo del tasto mail esistente
-        if(m1) m1.setAttribute("href", "mailto:" + emailContatto);
-    })();
-</script>
-
-    <script>
-        window.addEventListener("load", function(){
-            window.cookieconsent.initialise({
-                palette: {
-                    popup: { background: "#004270", text: "#ffffff" },
-                    button: { background: "#f97216", text: "#ffffff" }
-                },
-                theme: "classic",
-                position: "bottom",
-                type: "opt-in",
-                content: {
-                    message: "Questo sito utilizza cookie tecnici necessari per il corretto funzionamento e cookie di terze parti solo per finalità statistiche. Per maggiori dettagli, leggi la nostra informativa.",
-                    dismiss: "Accetta",
-                    deny: "Rifiuta",
-                    link: "Informativa sulla Privacy",
-                    href: "/privacy.html"
-                }
-            });
         });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
-
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-23R2ZW7WFW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-23R2ZW7WFW');
-    </script>
-
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WRP5J6RM');</script>
-
-  <script>
-// Mostra/Nasconde il tasto in base allo scroll
-window.onscroll = function() {
-    const btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        btn.style.display = "block";
-    } else {
-        btn.style.display = "none";
     }
-};
+</script>
 
-// Funzione per tornare su
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
+<script>
+    window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+            palette: {
+                popup: { background: "#004270", text: "#ffffff" },
+                button: { background: "#f97216", text: "#ffffff" }
+            },
+            theme: "classic",
+            position: "bottom",
+            type: "opt-in",
+            content: {
+                message: "Questo sito utilizza cookie tecnici e di terze parti per finalità statistiche.",
+                dismiss: "Accetta",
+                deny: "Rifiuta",
+                link: "Privacy Policy",
+                href: "/privacy.html"
+            }
+        });
     });
-}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23R2ZW7WFW"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-23R2ZW7WFW');
 </script>
 
 <script>
-    // Disabilita click destro su tutto il sito
-    document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
+    // Unificata gestione scroll
+    window.onscroll = function() {
+        const btn = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
         }
-    }, false);
+    };
 
-    // Impedisce il trascinamento delle immagini (drag and drop)
-    document.addEventListener('dragstart', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-        }
-    }, false);
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Protezione Immagini
+    document.addEventListener('contextmenu', e => { if (e.target.tagName === 'IMG') e.preventDefault(); }, false);
+    document.addEventListener('dragstart', e => { if (e.target.tagName === 'IMG') e.preventDefault(); }, false);
 </script>
 
 </body>
 
 </html>
+
 
 
 
