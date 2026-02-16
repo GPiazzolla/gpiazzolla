@@ -984,20 +984,27 @@ html {
         <div style="flex: 1; min-width: 280px;">
             <h4 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; border-bottom: 2px solid #f97216; display: inline-block; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Contatti</h4>
             
-            <div id="recapiti-protetti" style="display: grid; grid-template-columns: 80px 1fr; row-gap: 12px; align-items: center;">
-                </div>
+            <div id="recapiti-protetti" style="display: grid; grid-template-columns: 80px 1fr; row-gap: 15px; align-items: center; font-size: 1rem;">
+                <span style="color:#f97216; font-weight:700;">Uffici:</span>
+                <span id="tel-uff-placeholder">caricamento...</span>
+                
+                <span style="color:#f97216; font-weight:700;">Mobile:</span>
+                <span id="tel-mob-placeholder">caricamento...</span>
+                
+                <span style="color:#f97216; font-weight:700;">E-mail:</span>
+                <span id="mail-placeholder">caricamento...</span>
+            </div>
         </div>
 
         <div style="flex: 1; min-width: 280px;">
             <h4 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; border-bottom: 2px solid #f97216; display: inline-block; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Orari Lavorativi</h4>
             
             <div style="display: grid; grid-template-columns: 100px 1fr; row-gap: 12px; align-items: center; font-size: 1rem;">
-                <span style="font-weight: 700;">Lun \ Ven</span> <span>08:00 - 19:00</span>
+                <span style="font-weight: 700;">Lun / Ven</span> <span>08:00 - 19:00</span>
                 <span style="font-weight: 700;">Sabato</span> <span>08:00 - 12:00</span>
                 <span style="font-weight: 700; color: #f97216;">Festivi</span> <span style="font-style: italic; opacity: 0.9;">Su richiesta</span>
             </div>
         </div>
-        
     </div>
 </section>
       
@@ -1115,26 +1122,24 @@ html {
     const mob = "3663279958";
     const mail = "logistica" + "@" + "gpiazzolla.com";
     
-    // Inserimento nei recapiti protetti (se presenti)
-    const target = document.getElementById('recapiti-protetti');
-    if(target) {
-        target.innerHTML = `
-            <span style="color:#f97216; font-weight:700;">Uffici:</span> <a href="tel:${uff}" style="color:white; text-decoration:none;">0883 1950801</a> | 
-            <span style="color:#f97216; font-weight:700;">Mobile:</span> <a href="tel:${mob}" style="color:white; text-decoration:none;">366 3279958</a> | 
-            <span style="color:#f97216; font-weight:700;">E-mail:</span> <a href="mailto:${mail}" style="color:white; text-decoration:none;">${mail}</a>
-        `;
-    }
+    // Inserisce i dati nei placeholder della sezione contatti
+    const tUff = document.getElementById('tel-uff-placeholder');
+    const tMob = document.getElementById('tel-mob-placeholder');
+    const tMail = document.getElementById('mail-placeholder');
 
-    // Aggiornamento link sparsi (tel1, tel2, mail-link)
-    const t1 = document.getElementById("tel1");
-    const t2 = document.getElementById("tel2");
-    const m1 = document.getElementById("mail-link");
-    if(t1) t1.innerHTML = `<a href="tel:${mob}" style="text-decoration:none; color:inherit; font-weight:700;">366 3279958</a>`;
-    if(t2) t2.innerHTML = `<a href="tel:${uff}" style="text-decoration:none; color:inherit; font-weight:700;">0883 1950801</a>`;
-    if(m1) m1.setAttribute("href", "mailto:" + mail);
+    if(tUff) tUff.innerHTML = `<a href="tel:${uff}" style="color:white; text-decoration:none;">0883 1950801</a>`;
+    if(tMob) tMob.innerHTML = `<a href="tel:${mob}" style="color:white; text-decoration:none;">366 3279958</a>`;
+    if(tMail) tMail.innerHTML = `<a href="mailto:${mail}" style="color:white; text-decoration:none;">${mail}</a>`;
+
+    // Aggiorna anche gli ID nel footer (PEC e altri link)
+    const m1 = document.getElementById("mail-link"); // Il link PEC nel footer
+    if(m1) {
+        m1.setAttribute("href", "mailto:" + mail);
+        m1.innerHTML = mail;
+    }
 })();
 </script>
-
+  
 <script>
     const form = document.getElementById("contactForm");
     if(form) {
@@ -1227,6 +1232,7 @@ html {
 </body>
 
 </html>
+
 
 
 
