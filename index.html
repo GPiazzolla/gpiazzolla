@@ -1169,7 +1169,7 @@ html {
                     status.style.display = "block";
                     status.style.backgroundColor = "#d4edda";
                     status.style.color = "#155724";
-                    status.innerHTML = "✅ Richiesta inviata con successo!";
+                    status.innerHTML = "✅ Richiesta inviata con successo! La ricontatteremo nel più breve tempo possibile.";
                     form.reset();
                     btn.innerHTML = "INVIATO";
                     setTimeout(() => { btn.disabled = false; btn.innerHTML = "INVIA RICHIESTA"; status.style.display = "none"; }, 5000);
@@ -1178,7 +1178,7 @@ html {
                 status.style.display = "block";
                 status.style.backgroundColor = "#f8d7da";
                 status.style.color = "#721c24";
-                status.innerHTML = "❌ Errore. Riprova o scrivici via mail.";
+                status.innerHTML = "❌ Si è verificato un errore. Per favore riprovi, ci chiami o ci scriva direttamente via email";
                 btn.disabled = false;
                 btn.innerHTML = "RI-INVIA";
             }
@@ -1198,10 +1198,10 @@ html {
             position: "bottom",
             type: "opt-in",
             content: {
-                message: "Questo sito utilizza cookie tecnici e di terze parti per finalità statistiche.",
+                message: "Questo sito utilizza cookie tecnici necessari per il corretto funzionamento e cookie di terze parti solo per finalità statistiche. Per maggiori dettagli, leggi la nostra informativa.",
                 dismiss: "Accetta",
                 deny: "Rifiuta",
-                link: "Privacy Policy",
+                link: "Informativa sulla Privacy",
                 href: "/privacy.html"
             }
         });
@@ -1239,6 +1239,7 @@ html {
 </body>
 
 </html>
+
 
 
 
