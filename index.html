@@ -692,93 +692,40 @@ html {
         .hero-content h3 { font-size: 2.2rem; }
     }
 
-/* --- OTTIMIZZAZIONE IPHONE / MOBILE --- */
-@media (max-width: 768px) {
-    
-    /* 1. Contenitore Header: Compatto e centrato */
-    .site-header {
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 15px 15px !important;
-        height: auto !important;
-        gap: 12px !important;
-    }
+/* MOBILE (Unificato e Corretto) */
+    @media (max-width: 768px) {
+        
+        /* Header e Navigazione */
+        .site-header {
+            flex-direction: column !important;
+            gap: 15px;
+            text-align: center;
+            padding: 15px 2% !important;
+        }
 
-    /* 2. Brand Box: Logo e Nome uno sotto l'altro */
-    .brand-box {
-        flex-direction: column !important;
-        gap: 8px !important;
-        width: 100%;
-        text-align: center;
-    }
+        .brand-link {
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
 
-    .brand-logo-img {
-        height: 55px !important; /* Leggermente più piccolo per eleganza */
-        width: auto;
-    }
+        .brand-text {
+            border-left: none !important;
+            padding-left: 0 !important;
+        }
 
-    .brand-text {
-        border-left: none !important; /* Via la riga verticale */
-        padding-left: 0 !important;
-        text-align: center !important;
-    }
+        .nav-actions {
+            flex-direction: column;
+            width: 100%;
+            margin: 15px auto !important;
+            justify-content: center !important;
+        }
 
-    .brand-text h1 {
-        font-size: 1.1rem !important; /* Nome leggibile ma non gigante */
-        margin-bottom: 2px !important;
-    }
-
-    /* Slogan sotto il nome */
-    .brand-text p {
-        display: none !important; /* NASCONDE lo slogan su mobile per pulizia (opzionale) */
-    }
-
-    /* 3. Contatti: Centrati e puliti */
-    .header-contacts {
-        margin: 0 !important;
-        text-align: center !important;
-        width: 100%;
-        gap: 8px !important;
-        padding: 5px 0;
-        border-top: 1px solid #f0f0f0; /* Separatore sottile */
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    .header-contacts a {
-        justify-content: center !important;
-        font-size: 0.9rem !important;
-    }
-
-    /* 4. Pulsanti Azione: Full width per facilitare il tocco */
-    .nav-actions {
-        flex-direction: column !important;
-        gap: 10px !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* Tasto Dovecarico */
-    .dovecarico-link {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 8px;
-    }
-
-    /* Tasto Arancione */
-    .cta-header {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-        font-size: 0.95rem !important;
-    }
-
-    /* Nascondiamo cose superflue dell'header se serve spazio */
-    .header-contacts br {
-        display: none;
-    }
-}
+        .header-btn { width: 100%; }
+        
+        .header-contacts-table {
+            margin: 15px auto !important;
+            justify-content: center !important;
+        }
 
 /* Hero e Contenuti */
         .hero-content h3 { font-size: 1.8rem !important; }
@@ -1320,7 +1267,6 @@ function scrollToTop() {
 </body>
 
 </html>
-
 
 
 
