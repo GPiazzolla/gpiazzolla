@@ -809,7 +809,7 @@ html {
             .btn-info { color: #f97216; border-color: #f97216; }
             .btn-info:hover { background: #f97216; color: #fff; }
         </style>
-        <a id="mail-link" href="mailto:logistica@gpiazzolla.com" class="header-btn btn-mail">SCRIVICI VIA MAIL</a>
+        <a id="mail-link" href="mailto:logistica@gpiazzolla.com" class="header-btn btn-mail">QUOTAZIONI VIA MAIL</a>
         <a href="#contact-form" class="header-btn btn-info">RICHIEDI INFORMAZIONI</a>
     </div>
 </header>
@@ -823,7 +823,7 @@ html {
             </h3>
             
             <p style="font-size: 1.05rem; color: #3e3f41; margin-bottom: 30px; line-height: 1.7;">
-                Siamo <strong>un'azienda</strong> nata come proseguo di una storica realtà consolidata. Affianchiamo imprese italiane trasformando le esigenze di trasporto in soluzioni logistiche, le idee in strategie e creando connubi efficaci volti a raggiungere obiettivi concreti.
+                Siamo <strong>un'azienda</strong> nata come proseguo di una storica realtà. Dal 2005 affianchiamo imprese italiane trasformando le esigenze di trasporto in soluzioni logistiche, le idee in strategie operative, creando connubi efficaci volti a raggiungere obiettivi concreti.
             </p>
             
             <div style="border-left: 3px solid #f97216; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
@@ -910,7 +910,7 @@ html {
 
     <div style="flex: 1.5; min-width: 320px; display: flex; flex-direction: column; justify-content: center;">
         <h3 style="color: #004270; font-size: 2.2rem; font-weight: 900; margin-bottom: 20px; line-height: 1.2;">
-            "Il nostro lavoro è impegno <br>e grande passione"
+            "Il nostro impegno <br>è fatto di grande passione"
         </h3>
         
         <p style="color: #444; font-size: 1.1rem; line-height: 1.7; font-style: italic; margin-bottom: 35px; border-left: 4px solid #f97216; padding-left: 20px;">
@@ -926,7 +926,7 @@ html {
             <a href="https://www.linkedin.com/in/gioacchino-p86" target="_blank" 
                style="display: inline-flex; align-items: center; background: white; color: #0077b5; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 800; gap: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #eee; font-size: 0.85rem;">
                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" style="width: 18px;" alt="LinkedIn Logo">
-               CONNECT with ME
+               Connect with ME
             </a>
         </div>
     </div>
@@ -956,19 +956,19 @@ html {
 </section>
       
         <section id="contact-form" class="contact-card" style="padding: 40px 20px; scroll-margin-top: 120px;">
-    <h3 style="text-align: center; color: #004270; margin-bottom: 20px;">CONTATTACI ORA</h3>
+    <h3 style="text-align: center; color: #004270; margin-bottom: 20px;">RICHIEDI INFORMAZIONI E CONSULENZA GRATUITA</h3>
     
     <form id="contactForm" action="https://formspree.io/f/xjkrvrpn" method="POST">
         
         <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;" class="form-grid">
-            <input type="text" name="Referente" placeholder="Il tuo Nome *" required autocomplete="name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-            <input type="text" name="Azienda" placeholder="Nome Azienda *" required autocomplete="organization" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="Referente" placeholder="Referente *" required autocomplete="name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="text" name="Azienda" placeholder="Azienda *" required autocomplete="organization" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;" class="form-grid">
-            <input type="email" name="email" placeholder="Tua Email *" required autocomplete="email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="email" name="email" placeholder="Email *" required autocomplete="email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
             <input type="tel" name="telefono" placeholder="Telefono *" required autocomplete="tel" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
 
@@ -1093,7 +1093,7 @@ html {
                 status.style.display = "block";
                 status.style.backgroundColor = "#d4edda"; // Verde chiaro sfondo
                 status.style.color = "#155724"; // Verde scuro testo
-                status.innerHTML = "✅ Grazie! La tua richiesta è stata inviata.";
+                status.innerHTML = "✅ La tua richiesta è stata inviata! Ti contatteremo nel più breve tempo possibile";
                 form.reset(); // Pulisce i campi
                 btn.innerHTML = "INVIATO";
                 
@@ -1114,7 +1114,7 @@ html {
             status.style.display = "block";
             status.style.backgroundColor = "#f8d7da"; // Rosso chiaro sfondo
             status.style.color = "#721c24"; // Rosso scuro testo
-            status.innerHTML = "❌ Si è verificato un errore. Per favore riprova o scrivici direttamente via email.";
+            status.innerHTML = "❌ Si è verificato un errore. Per favore riprova, chiamaci o scrivici direttamente via email.";
             btn.disabled = false;
             btn.innerHTML = "RI-INVIA RICHIESTA";
         }
@@ -1218,6 +1218,7 @@ function scrollToTop() {
 </body>
 
 </html>
+
 
 
 
