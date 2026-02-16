@@ -974,12 +974,12 @@ html {
 
         <textarea name="messaggio" placeholder="Come possiamo aiutarti? *" rows="4" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px;"></textarea>
 
-        <div style="margin-bottom: 20px; font-size: 0.85rem; display: flex; align-items: flex-start; gap: 10px;">
-            <input type="checkbox" id="privacy-check" required style="margin-top: 3px;">
-            <label for="privacy-check" style="cursor: pointer;">
-                Ho letto e accetto la <a href="privacy.html" target="_blank" style="color: #f97216; text-decoration: underline;">Privacy Policy</a> e acconsento al trattamento dei dati.
-            </label>
-        </div>
+        <div style="margin-bottom: 25px; font-size: 0.9rem; display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <input type="checkbox" id="privacy-check" required style="width: auto; margin: 0; cursor: pointer;">
+    <label for="privacy-check" style="cursor: pointer; line-height: 1.2;">
+        Ho letto e accetto la <a href="privacy.html" target="_blank" style="color: #f97216; text-decoration: underline;">Privacy Policy</a> *
+    </label>
+</div>
 
         <button type="submit" id="submit-btn" style="width: 100%; background: #f97216; color: white; padding: 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; text-transform: uppercase; transition: background 0.3s;">
             INVIA RICHIESTA
@@ -994,7 +994,7 @@ html {
     </button>
 
     <footer style="background: #004270; color: white; padding: 40px 5% 20px; font-family: sans-serif; border-top: 2px solid #f97216;">
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; justify-content: center; align-items: start;">
+    <div style="max-width: 100%; width: 100%; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; padding: 0 5%;">
         
         <div style="display: flex; flex-direction: column; gap: 12px; min-width: 200px;">
             <a href="https://gpiazzolla.com" target="_blank" rel="noopener noreferrer">
@@ -1218,6 +1218,7 @@ function scrollToTop() {
 </body>
 
 </html>
+
 
 
 
