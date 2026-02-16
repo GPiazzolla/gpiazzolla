@@ -1150,9 +1150,26 @@ function scrollToTop() {
 }
 </script>
 
+<script>
+    // Disabilita click destro su tutto il sito
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    }, false);
+
+    // Impedisce il trascinamento delle immagini (drag and drop)
+    document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    }, false);
+</script>
+  
 </body>
 
 </html>
+
 
 
 
