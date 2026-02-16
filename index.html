@@ -1042,6 +1042,10 @@ html {
         <p>© 2026 GIOACCHINO PIAZZOLLA - Tutti i diritti riservati.</p>
     </div>
 </footer>
+
+<button id="backToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; border: 2px solid #f97216; background: #004270; color: white; width: 45px; height: 45px; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); align-items: center; justify-content: center;">
+    <span style="border: solid white; border-width: 0 3px 3px 0; display: inline-block; padding: 4px; transform: rotate(-135deg); margin-top: 3px;"></span>
+</button>
   
   <script>
 // SCRIPT ORIGINALE PROTETTO
@@ -1213,10 +1217,33 @@ function scrollToTop() {
         }
     }, false);
 </script>
+
+  <script>
+    // Seleziona il tasto
+    const backToTopBtn = document.getElementById("backToTop");
+
+    // Mostra il tasto quando si scende con lo scroll
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopBtn.style.display = "flex";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    // Funzione per tornare su dolcemente
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
   
 </body>
 
 </html>
+
 
 
 
