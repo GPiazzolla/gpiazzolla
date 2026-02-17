@@ -47,7 +47,7 @@
   <meta name="twitter:title" content="Gioacchino Piazzolla - Consulenza | Logistica | Trasporti">
   <meta name="twitter:description" content="Gioacchino Piazzolla – Servizi logistici e trasporti in tutta Italia. Contattaci per progetti, preventivi e soluzioni personalizzate">
   <meta name="twitter:image" content="https://gpiazzolla.com/gpiazzolla_v2.jpg">
-  
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -506,272 +506,84 @@
 }
 </script>
 
-  
+
   <style>
     :root {
       --main-blue: #004270;
-      --light-blue: #4963ad;
       --accent-orange: #f97216;
       --text-gray: #3e3f41;
       --bg-light: #f4f7f9;
     }
 
     * { box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      color: #333;
-      line-height: 1.6;
-      background-color: #fff;
-    }
+    body { font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; color: var(--text-gray); background-color: #fff; overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
 
-html {
-        scroll-behavior: smooth;
-    }
-    
-    /* --- NUOVO HEADER --- */
+    /* Layout di base */
+    .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+
+    /* Header */
     .site-header {
-      background: #fff;
-      border-bottom: 2px solid var(--bg-light);
-      padding: 10px 5%;
+      width: 100%;
+      padding: 4px 2%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: #fff;
+      border-bottom: 2px solid #f4f7f9;
+      box-sizing: border-box;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    .brand-box { display: flex; align-items: center; gap: 15px; }
-    .brand-logo-img { height: 50px; width: auto; }
-    
-    .brand-text h1 {
-      font-size: 1.2rem;
-      margin: 0;
-      color: var(--main-blue);
-      font-weight: 800;
-      letter-spacing: -0.5px;
+    .header-btn-responsive {
+        display: inline-block;
+        width: 175px;
+        padding: 7px 0;
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: 800;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s;
+        border: 2px solid;
+        text-transform: uppercase;
     }
-/* Icone telefoni */
-    .phone-icon {
-      width: 16px;
-      height: 16px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-    
-    .header-contacts {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      text-align: right;
-      margin-left: auto;
-      margin-right: 25px;
-    }
+    .btn-blue { color: #004270; border-color: #004270; background: #fff; }
+    .btn-blue:hover { background: #004270; color: #fff; }
+    .btn-org { color: #f97216; border-color: #f97216; background: #fff; }
+    .btn-org:hover { background: #f97216; color: #fff; }
 
-    .header-contacts a {
-      text-decoration: none;
-      color: var(--text-gray);
-      font-weight: 700;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-    .nav-actions { display: flex; align-items: center; gap: 20px; }
-    
-    .dovecarico-link {
-      color: var(--accent-orange);
-      text-decoration: none;
-      font-weight: 700;
-      font-style: italic;
-      font-size: 0.9rem;
-      border: 1px solid var(--accent-orange);
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: all 0.3s;
-    }
-    .dovecarico-link:hover { background: var(--accent-orange); color: #fff; }
-    
-    .cta-header {
-      background: var(--accent-orange);
-      color: white !important;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.85rem;
-      box-shadow: 0 4px 6px rgba(249, 114, 22, 0.2);
-      transition: transform 0.2s;
-    }
-    .cta-header:hover { transform: translateY(-2px); background: #e6640d; }
-    img.logo {
-      height: 60px; /* Altezza precisa per non sgranare */
-      width: auto;
-      display: block;
-      margin: 0; 
-      image-rendering: -webkit-optimize-contrast;
-    }
+    /* Hero */
+    .hero-section { padding: 60px 0; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+    .hero-content { flex: 1; min-width: 300px; }
+    .hero-image { flex: 1; min-width: 300px; }
+    .hero-image img { width: 100%; border-radius: 15px; box-shadow: 20px 20px 0px var(--bg-light); }
 
-    /* --- HERO SECTION --- */
-    .container { max-width: 1100px; margin: auto; padding: 0 20px; }
-    
-    .hero-section {
-      padding: 60px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-    }
+    /* Servizi */
+    .services-grid { background: var(--bg-light); padding: 50px; border-radius: 20px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; margin: 40px 0; }
+    .service-card { background: #fff; padding: 30px; border-radius: 15px; transition: transform 0.3s; border: 1px solid #eef2f5; position: relative; overflow: hidden; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 
-    .hero-content { flex: 1; min-width: 320px; }
-    .hero-content h2 { color: var(--light-blue); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 10px; }
-    .hero-content h3 { font-size: 2.5rem; line-height: 1.1; margin: 0 0 20px 0; color: var(--main-blue); }
-    
-    .hero-image { flex: 1; min-width: 320px; position: relative; }
-    .hero-image img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 20px 20px 0px var(--bg-light);
-    }
+    /* Icone ADR */
+    .icona-radio { width: 0.9em !important; height: 0.85em !important; vertical-align: -0.1em; margin-left: 2px; }
+    .icona-esplosivo { width: 1.1em !important; height: 1.05em !important; vertical-align: -0.15em; margin-left: 2px; }
 
-    /* --- SERVIZI --- */
-    .services-grid {
-      background: var(--bg-light);
-      padding: 50px;
-      border-radius: 20px;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 30px;
-      margin: 40px 0;
-    }
+    /* Back to Top */
+    #backToTop { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; background: var(--main-blue); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; font-weight: bold; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: all 0.3s; }
+    #backToTop:hover { background: var(--accent-orange); transform: scale(1.1); }
 
-    .service-list p { 
-        margin: 8px 0; 
-        display: flex; 
-        align-items: center; 
-        gap: 10px; 
-        font-weight: 500;
-    }
-    .service-list p::before { content: '✓'; color: var(--accent-orange); font-weight: bold; }
-.icona-radio {
-    width: 0.9em !important;  
-    height: 0.85em !important; 
-  }
-.icona-esplosivo {
-    width: 1.1em !important; /* Aumentato leggermente (es. 1.1em) */
-    height: 1.05em !important;
-    transform: translateY(-0.7px);
-  }
-
-
-    /* --- FORM & FOOTER --- */
-    .contact-card { background: #fff; border: 1px solid #eee; padding: 30px; border-radius: 10px; margin-top: 30px; }
-    input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
-    button[type="submit"] {
-      background: var(--main-blue);
-      color: white;
-      border: none;
-      padding: 15px 40px;
-      font-weight: 700;
-      cursor: pointer;
-      border-radius: 5px;
-      width: 100%;
-    }
-
-    .footer-bottom {
-      background: var(--main-blue);
-      color: white;
-      padding: 40px 5%;
-      text-align: center;
-      margin-top: 60px;
-    }
-    .footer-bottom a { color: #fff; text-decoration: none; font-size: 0.9rem; }
-
-/* TABLET */
-    @media (max-width: 1024px) {
-        .hero-section { flex-direction: column; }
-        .services-grid { flex-direction: column; }
-        .hero-content h3 { font-size: 2.2rem; }
-    }
-
-/* MOBILE (Unificato e Corretto) */
+    /* --- AGGIUNTA CHIRURGICA SOLO PER MOBILE (NON TOCCA IL DESKTOP) --- */
     @media (max-width: 768px) {
-        
-        /* Header e Navigazione */
-        .site-header {
-            flex-direction: column !important;
-            gap: 15px;
-            text-align: center;
-            padding: 15px 2% !important;
-        }
-
-        .brand-link {
-            flex-direction: column !important;
-            gap: 10px !important;
-        }
-
-        .brand-text {
-            border-left: none !important;
-            padding-left: 0 !important;
-        }
-
-        .nav-actions {
-            flex-direction: column;
-            width: 100%;
-            margin: 15px auto !important;
-            justify-content: center !important;
-        }
-
-        .header-btn { width: 100%; }
-        
-        .header-contacts-table {
-            margin: 15px auto !important;
-            justify-content: center !important;
-        }
-
-/* Hero e Contenuti */
-        .hero-content h3 { font-size: 1.8rem !important; }
-        
-        .hero-section, .services-grid {
-            flex-direction: column !important;
-            padding: 30px 5% !important;
-        }
-
-        .services-grid { padding: 30px 20px; }
-        
-        table { font-size: 0.8rem; }
-
-        /* Form e Footer */
-        .form-grid {
-            grid-template-columns: 1fr !important;
-        }
-        
-        .contact-form div {
-            grid-template-columns: 1fr !important;
-        }
-
-        footer div[style*="grid-template-columns"] {
-            grid-template-columns: 1fr !important;
-            text-align: center !important;
-            gap: 40px !important;
-        }
-
-        /* Fix visuale linea arancione */
-        div[style*="border-left: 2px solid #f97216"] {
-            border-left: none !important;
-            border-top: 2px solid #f97216 !important;
-            padding-left: 0 !important;
-            padding-top: 10px !important;
-            display: inline-block !important;
-        }
-    }
-      
-/* SCHERMI GRANDI */
-    @media (min-width: 1400px) {
-        .container { max-width: 1300px; }
-        .hero-content h3 { font-size: 3rem; }
+        .site-header { flex-direction: column !important; padding: 10px !important; gap: 10px !important; height: auto !important; }
+        .header-logo-pic { display: none !important; }
+        .header-contacts-container { margin: 0 auto !important; }
+        .header-contacts-container td:first-child { display: none !important; }
+        .nav-actions { display: flex !important; width: 100% !important; gap: 5px !important; }
+        .header-btn-responsive { flex: 1 !important; width: auto !important; font-size: 0.65rem !important; }
+        .hero-section { flex-direction: column-reverse !important; padding: 30px 0 !important; }
+        .services-grid { grid-template-columns: 1fr !important; padding: 20px !important; }
     }
 
 .cc-window{opacity:1;-webkit-transition:opacity 1s ease;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{-webkit-transition:transform 1s ease;-webkit-transition:-webkit-transform 1s ease;transition:-webkit-transform 1s ease;transition:transform 1s ease;transition:transform 1s ease,-webkit-transform 1s ease}.cc-animate.cc-revoke.cc-top{-webkit-transform:translateY(-2em);transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{-webkit-transform:translateY(2em);transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-top{-webkit-transform:translateY(0);transform:translateY(0)}.cc-animate.cc-revoke.cc-active.cc-bottom{-webkit-transform:translateY(0);transform:translateY(0)}.cc-revoke:hover{-webkit-transform:translateY(0);transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;-webkit-transition:max-height 1s;transition:max-height 1s}
@@ -783,23 +595,15 @@ html {
 
   </style>
 </head>
-
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRP5J6RM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
-    <header class="site-header" style="width: 100%; padding: 4px 2%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 2px solid #f4f7f9; box-sizing: border-box; font-family: 'Inter', sans-serif; position: sticky; top: 0; z-index: 1000;">
-    
-    <a href="https://gpiazzolla.com" style="text-decoration: none; display: flex; align-items: center; gap: 18px;">
-        <picture>
-            <source srcset="gpiazzolla_v2.webp" type="image/webp">
-            <img src="gpiazzolla_v2.jpg" 
-                 alt="Logistica Trasporti Logo Gioacchino Piazzolla GPIAZZOLLA" 
-                 width="1075" height="720" 
-                 style="width: 220px; height: auto; display: block;"
-                 fetchpriority="high">
-        </picture>
 
-        <div class="brand-text" style="border-left: 2px solid #f0f0f0; padding-left: 18px; display: flex; flex-direction: column; justify-content: center;">
+<header class="site-header">
+    <a href="https://gpiazzolla.com" style="text-decoration: none; display: flex; align-items: center; gap: 18px;">
+        <picture class="header-logo-pic">
+            <source srcset="gpiazzolla_v2.webp" type="image/webp">
+            <img src="gpiazzolla_v2.jpg" alt="Logo" width="220" style="width: 220px; height: auto; display: block;">
+        </picture>
+        <div style="border-left: 2px solid #f0f0f0; padding-left: 18px; display: flex; flex-direction: column; justify-content: center;" class="brand-text-mobile">
             <h1 style="margin: 0; font-size: 1.45rem; color: #004270; font-weight: 900; line-height: 1.1; letter-spacing: -0.5px;">GIOACCHINO PIAZZOLLA</h1>
             <small style="color: #666; font-size: 0.75rem; font-weight: 700; display: block; margin-top: 2px; letter-spacing: 1px; text-transform: uppercase;">CONSULENZA | LOGISTICA | TRASPORTI</small>
         </div>
@@ -809,79 +613,35 @@ html {
         <table style="border-spacing: 0; border-collapse: collapse; margin-left: auto;">
             <tr>
                 <td style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">UFFICI</td>
-                <td style="width: 42px; vertical-align: middle; text-align: left;">
-                    <a href="tel:+3908831950801" style="line-height: 0; display: inline-block;">
-                        <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" alt="Telefono Gioacchino Piazzolla" style="width: 14px; height: 14px;">
-                    </a>
+                <td style="width: 30px; vertical-align: middle; text-align: left;">
+                    <a href="tel:+3908831950801"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px; display: block;"></a>
                 </td>
-                <td id="tel2" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
-                    <a href="tel:+3908831950801" style="text-decoration: none; color: #3e3f41;">0883 1950801</a>
+                <td style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
+                    <a href="tel:+3908831950801" style="text-decoration: none; color: inherit;">0883 1950801</a>
                 </td>
             </tr>
-            <tr><td colspan="3" style="height: 2px;"></td></tr>
             <tr>
                 <td style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">MOBILE</td>
-                <td style="width: 42px; vertical-align: middle; text-align: left;">
-                    <div style="display: flex; gap: 5px; align-items: center; line-height: 0;">
-                        <a href="tel:+393663279958" style="line-height: 0; display: inline-block;">
-                            <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" alt="Cellulare Gioacchino Piazzolla" style="width: 14px; height: 14px;">
-                        </a>
-                        <a href="https://wa.me/393663279958" target="_blank" style="line-height: 0;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Whatsapp Gioacchino Piazzolla" style="width: 15px; height: 15px;">
-                        </a>
+                <td style="width: 45px; vertical-align: middle; text-align: left;">
+                    <div style="display: flex; gap: 5px; align-items: center;">
+                        <a href="tel:+393663279958"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px; display: block;"></a>
+                        <a href="https://wa.me/393663279958" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 15px; height: 15px; display: block;"></a>
                     </div>
                 </td>
-                <td id="tel1" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
-                    <a href="tel:+393663279958" style="text-decoration: none; color: #3e3f41;">366 3279958</a>
+                <td style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
+                    <a href="tel:+393663279958" style="text-decoration: none; color: inherit;">366 3279958</a>
                 </td>
             </tr>
         </table>
     </div>
 
     <div class="nav-actions" style="display: flex; gap: 10px;">
-        <style>
-            .header-btn-responsive { display: inline-block; width: 175px; padding: 7px 0; text-align: center; font-size: 0.75rem; font-weight: 800; border-radius: 5px; text-decoration: none; transition: all 0.3s; border: 2px solid; text-transform: uppercase; background: #fff; }
-            .btn-blue { color: #004270; border-color: #004270; }
-            .btn-blue:hover { background: #004270; color: #fff; }
-            .btn-org { color: #f97216; border-color: #f97216; }
-            .btn-org:hover { background: #f97216; color: #fff; }
-
-            /* LOGICA SOLO PER MOBILE (sotto i 768px) */
-            @media (max-width: 768px) {
-                /* Nascondiamo quello che ingombra */
-                .brand-text, .header-contacts-container { 
-                    display: none !important; 
-                }
-                
-                /* Sistemiamo l'header per far stare logo e tasti sulla stessa riga */
-                .site-header {
-                    padding: 8px 15px !important;
-                    justify-content: space-between !important;
-                    flex-direction: row !important; /* Forza la riga invece della colonna */
-                }
-
-                .nav-actions {
-                    gap: 6px !important;
-                }
-
-                .header-btn-responsive {
-                    width: auto !important; 
-                    padding: 8px 12px !important;
-                    font-size: 0.65rem !important;
-                }
-                
-                /* Rimpiccioliamo leggermente il logo solo su mobile */
-                .site-header img {
-                    width: 130px !important;
-                }
-            }
-        </style>
-        <a id="mail-link" href="mailto:logistica@gpiazzolla.com" class="header-btn-responsive btn-blue">RICHIEDI PREVENTIVO</a>
-        <a href="#contact-form" class="header-btn-responsive btn-org">RICHIEDI INFORMAZIONI</a>
+        <a href="mailto:logistica@gpiazzolla.com" class="header-btn-responsive btn-blue">PREVENTIVO</a>
+        <a href="#contact-form" class="header-btn-responsive btn-org">INFORMAZIONI</a>
     </div>
 </header>
-  
-    <main class="container">
+
+<main class="container">
     <section class="hero-section" style="display: flex; align-items: stretch; gap: 50px; padding: 60px 0;">
         
         <div class="hero-content" style="flex: 1.2;">
@@ -1273,94 +1033,3 @@ html {
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
