@@ -787,97 +787,84 @@ html {
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRP5J6RM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
-    <header class="site-header" style="width: 100%; padding: 4px 2%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 2px solid #f4f7f9; box-sizing: border-box; font-family: 'Inter', sans-serif; position: sticky; top: 0; z-index: 1000;">
+    <header class="site-header" style="width: 100%; background: #fff; border-bottom: 2px solid #f4f7f9; box-sizing: border-box; font-family: 'Inter', sans-serif; position: sticky; top: 0; z-index: 1000; padding: 0;">
     
-    <a href="https://gpiazzolla.com" style="text-decoration: none; display: flex; align-items: center; gap: 18px;">
-        <picture>
-            <source srcset="gpiazzolla_v2.webp" type="image/webp">
-            <img src="gpiazzolla_v2.jpg" 
-                 alt="Logistica Trasporti Logo Gioacchino Piazzolla GPIAZZOLLA" 
-                 width="1075" height="720" 
-                 style="width: 220px; height: auto; display: block;"
-                 fetchpriority="high">
-        </picture>
+    <div class="header-wrapper" style="max-width: 1100px; margin: 0 auto; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    
+        <a href="https://gpiazzolla.com" class="brand-link" style="text-decoration: none; display: flex; align-items: center; gap: 18px;">
+            <picture class="desktop-only-logo">
+                <source srcset="gpiazzolla_v2.webp" type="image/webp">
+                <img src="gpiazzolla_v2.jpg" 
+                     alt="Logistica Trasporti Gioacchino Piazzolla" 
+                     width="1075" height="720" 
+                     style="width: 200px; height: auto; display: block;"
+                     fetchpriority="high">
+            </picture>
 
-        <div class="brand-text" style="border-left: 2px solid #f0f0f0; padding-left: 18px; display: flex; flex-direction: column; justify-content: center;">
-            <h1 style="margin: 0; font-size: 1.45rem; color: #004270; font-weight: 900; line-height: 1.1; letter-spacing: -0.5px;">GIOACCHINO PIAZZOLLA</h1>
-            <small style="color: #666; font-size: 0.75rem; font-weight: 700; display: block; margin-top: 2px; letter-spacing: 1px; text-transform: uppercase;">CONSULENZA | LOGISTICA | TRASPORTI</small>
+            <div class="brand-text-container" style="border-left: 2px solid #f0f0f0; padding-left: 18px; display: flex; flex-direction: column; justify-content: center;">
+                <h1 class="main-title" style="margin: 0; font-size: 1.45rem; color: #004270; font-weight: 900; line-height: 1.1; letter-spacing: -0.5px;">GIOACCHINO PIAZZOLLA</h1>
+                <small class="sub-title" style="color: #666; font-size: 0.75rem; font-weight: 700; display: block; margin-top: 2px; letter-spacing: 1px; text-transform: uppercase;">CONSULENZA | LOGISTICA | TRASPORTI</small>
+            </div>
+        </a>
+
+        <div class="header-contacts-container" style="margin-left: auto; margin-right: 30px;">
+            <table class="contacts-table" style="border-spacing: 0; border-collapse: collapse; margin-left: auto;">
+                <tr>
+                    <td class="label-office" style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">UFFICI</td>
+                    <td style="width: 25px; vertical-align: middle; text-align: left;">
+                        <a href="tel:+3908831950801"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;"></a>
+                    </td>
+                    <td class="phone-num" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
+                        <a href="tel:+3908831950801" style="text-decoration: none; color: inherit;">0883 1950801</a>
+                    </td>
+                </tr>
+                <tr><td colspan="3" style="height: 4px;"></td></tr>
+                <tr>
+                    <td class="label-mobile" style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">MOBILE</td>
+                    <td style="width: 25px; vertical-align: middle; text-align: left;">
+                        <a href="tel:+393663279958"><img src="https://img.icons8.com/ios-filled/50/004270/phone.png" style="width: 14px; height: 14px;"></a>
+                    </td>
+                    <td class="phone-num" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
+                        <a href="tel:+393663279958" style="text-decoration: none; color: inherit;">366 3279958</a>
+                    </td>
+                </tr>
+            </table>
         </div>
-    </a>
 
-    <div class="header-contacts-container" style="margin-left: auto; margin-right: 30px;">
-        <table style="border-spacing: 0; border-collapse: collapse; margin-left: auto;">
-            <tr>
-                <td style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">UFFICI</td>
-                <td style="width: 42px; vertical-align: middle; text-align: left;">
-                    <a href="tel:+3908831950801" style="line-height: 0; display: inline-block;">
-                        <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" alt="Telefono Gioacchino Piazzolla" style="width: 14px; height: 14px;">
-                    </a>
-                </td>
-                <td id="tel2" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
-                    <a href="tel:+3908831950801" style="text-decoration: none; color: #3e3f41;">0883 1950801</a>
-                </td>
-            </tr>
-            <tr><td colspan="3" style="height: 2px;"></td></tr>
-            <tr>
-                <td style="font-size: 0.75rem; color: #999; font-weight: 800; text-transform: uppercase; padding-right: 12px; text-align: right;">MOBILE</td>
-                <td style="width: 42px; vertical-align: middle; text-align: left;">
-                    <div style="display: flex; gap: 5px; align-items: center; line-height: 0;">
-                        <a href="tel:+393663279958" style="line-height: 0; display: inline-block;">
-                            <img src="https://img.icons8.com/ios-filled/50/004270/phone.png" alt="Cellulare Gioacchino Piazzolla" style="width: 14px; height: 14px;">
-                        </a>
-                        <a href="https://wa.me/393663279958" target="_blank" style="line-height: 0;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Whatsapp Gioacchino Piazzolla" style="width: 15px; height: 15px;">
-                        </a>
-                    </div>
-                </td>
-                <td id="tel1" style="text-align: right; font-weight: 700; font-size: 0.95rem; white-space: nowrap; color: #3e3f41;">
-                    <a href="tel:+393663279958" style="text-decoration: none; color: #3e3f41;">366 3279958</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+        <div class="nav-actions" style="display: flex; gap: 10px;">
+            <style>
+                /* RESET E BASE */
+                .header-btn-responsive { display: inline-block; width: 175px; padding: 8px 0; text-align: center; font-size: 0.72rem; font-weight: 800; border-radius: 5px; text-decoration: none; transition: all 0.3s; border: 2px solid; text-transform: uppercase; background: #fff; }
+                .btn-blue { color: #004270; border-color: #004270; }
+                .btn-org { color: #f97216; border-color: #f97216; }
+                .btn-blue:hover { background: #004270; color: #fff; }
+                .btn-org:hover { background: #f97216; color: #fff; }
 
-    <div class="nav-actions" style="display: flex; gap: 10px;">
-        <style>
-            .header-btn-responsive { display: inline-block; width: 175px; padding: 7px 0; text-align: center; font-size: 0.75rem; font-weight: 800; border-radius: 5px; text-decoration: none; transition: all 0.3s; border: 2px solid; text-transform: uppercase; background: #fff; }
-            .btn-blue { color: #004270; border-color: #004270; }
-            .btn-blue:hover { background: #004270; color: #fff; }
-            .btn-org { color: #f97216; border-color: #f97216; }
-            .btn-org:hover { background: #f97216; color: #fff; }
+                /* --- TRASFORMAZIONE MOBILE (Sotto 768px) --- */
+                @media (max-width: 768px) {
+                    .header-wrapper { flex-direction: column !important; padding: 15px 10px !important; gap: 12px !important; }
+                    
+                    /* Rimuoviamo il logo immagine e centriamo il nome */
+                    .desktop-only-logo { display: none !important; }
+                    .brand-link { width: 100%; justify-content: center; text-align: center; }
+                    .brand-text-container { border-left: none !important; padding-left: 0 !important; }
+                    .main-title { font-size: 1.3rem !important; }
+                    .sub-title { font-size: 0.65rem !important; }
 
-            /* LOGICA SOLO PER MOBILE (sotto i 768px) */
-            @media (max-width: 768px) {
-                /* Nascondiamo quello che ingombra */
-                .brand-text, .header-contacts-container { 
-                    display: none !important; 
+                    /* Contatti: li mettiamo in riga sotto al nome */
+                    .header-contacts-container { margin: 0 auto !important; width: 100%; }
+                    .contacts-table { margin: 0 auto !important; }
+                    .label-office, .label-mobile { display: none; } /* Nascondiamo le etichette per pulizia */
+                    .phone-num { font-size: 0.85rem !important; padding-left: 5px; }
+                    
+                    /* Bottoni: uno di fianco all'altro per salvare spazio */
+                    .nav-actions { width: 100%; gap: 5px !important; }
+                    .header-btn-responsive { flex: 1; width: auto !important; font-size: 0.6rem !important; padding: 10px 2px !important; }
                 }
-                
-                /* Sistemiamo l'header per far stare logo e tasti sulla stessa riga */
-                .site-header {
-                    padding: 8px 15px !important;
-                    justify-content: space-between !important;
-                    flex-direction: row !important; /* Forza la riga invece della colonna */
-                }
-
-                .nav-actions {
-                    gap: 6px !important;
-                }
-
-                .header-btn-responsive {
-                    width: auto !important; 
-                    padding: 8px 12px !important;
-                    font-size: 0.65rem !important;
-                }
-                
-                /* Rimpiccioliamo leggermente il logo solo su mobile */
-                .site-header img {
-                    width: 130px !important;
-                }
-            }
-        </style>
-        <a id="mail-link" href="mailto:logistica@gpiazzolla.com" class="header-btn-responsive btn-blue">RICHIEDI PREVENTIVO</a>
-        <a href="#contact-form" class="header-btn-responsive btn-org">RICHIEDI INFORMAZIONI</a>
+            </style>
+            <a href="mailto:logistica@gpiazzolla.com" class="header-btn-responsive btn-blue">PREVENTIVO</a>
+            <a href="#contact-form" class="header-btn-responsive btn-org">INFORMAZIONI</a>
+        </div>
     </div>
 </header>
   
@@ -1273,6 +1260,7 @@ html {
 </body>
 
 </html>
+
 
 
 
