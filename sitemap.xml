@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <url>
     <loc>https://gpiazzolla.com/</loc>
-    <lastmod>2026-02-16T20:55:00+01:00</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-02-19T15:35:00+01:00</lastmod>
+    <priority>1.0>
 
     <image:image>
       <image:loc>https://gpiazzolla.com/gpiazzolla_v2.jpg</image:loc>
@@ -28,18 +29,20 @@
     </image:image>
 
     <image:image>
-      <image:loc>https://gpiazzolla.com/trasporti-gioacchino-piazzolla_v2.jpg</image:loc>
+      <image:loc>https://gpiazzolla.com/sfondo-camion.jpg</image:loc>
       <image:title>Flotta Trasporti Gioacchino Piazzolla</image:title>
       <image:caption>Soluzioni di trasporto industriale e distribuzione merci</image:caption>
     </image:image>
 
     <image:image>
-      <image:loc>https://gpiazzolla.com/gioacchino-piazzolla-trasporti-logistica-apple.png</image:loc>
-      <image:title>Logo Gioacchino Piazzolla</image:title>
+      <image:loc>https://gpiazzolla.com/trasporti-gioacchino-piazzolla_v2.jpg</image:loc>
+      <image:title>CEO Gioacchino Piazzolla</image:title>     
+      <image:caption>CEO Gioacchino Piazzolla</image:caption>
     </image:image>
 
   </url>
 </urlset>
+
 
 
 
