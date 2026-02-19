@@ -5,11 +5,11 @@
     {
       "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#organization",
-      "name": "Gioacchino Piazzolla - Consulenza Logistica Trasporti ADR Healthcare",
+      "name": "Gioacchino Piazzolla - Consulenza Logistica Trasporti ADR",
       "url": "https://gpiazzolla.com/",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
-      "description": "Servizi professionali di logistica autotrasporti vettore trasportatore. Gestione trasporti conto terzi specializzata per l'industria farmaceutica healthcare, radiofarmaceutica, manifatturiera, produzione e commercio industriale, food, beverage, GDO e HORECA. Offriamo servizi di consulenza logistica e gestionale, progetti logistici e deposito merci in sede di 44.000 Mq, preventivi di trasporti e spedizioni in tutta Italia. Regioni maggiormente servite: Puglia, Basilicata, Veneto, Lombardia, Emilia Romagna, Friuli Venezia Giulia, Trentino, Lazio, Toscana, Campania e Sicilia. I nostri maggiori clienti: FassaBortolo, Casillo, Pedon, GeneralTrade HappyCasa, Quargentan, Pedrollo, Ferroli, Olearia Desantis, Gruppo Stir, EventiService, InsoSystem, Zero&Company Suns, SuperBeton, Fornaci Calce Grigolin, Cuki, Miti, Domoliving ed altri. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+      "description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate I nostri maggiori clienti: FassaBortolo, Casillo, Pedon, GeneralTrade HappyCasa, Quargentan, Pedrollo, Ferroli, Olearia Desantis, Gruppo Stir, EventiService, InsoSystem, Zero&Company Suns, SuperBeton, Fornaci Calce Grigolin, Cuki, Miti, Domoliving ed altri. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
       "telephone": ["+3908831950801", "+393663279958"],
       "slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
       "serviceType": "Delivery service / Transport service / Logistic service",
@@ -66,13 +66,13 @@
       ],
       "makesOffer": [
         { "@type": "Offer", "name": "Trasporto Radiofarmaci (ADR Class 7, GDP)" },
-        { "@type": "Offer", "name": "Trasporto Farmaci e Radiofarmaci a Temperatura Controllata (ATP, GDP, ADR)" },
+        { "@type": "Offer", "name": "Trasporto Farmaci e Radiofarmaci anche a Temperatura Controllata (ATP, GDP, ADR)" },
         { "@type": "Offer", "name": "Servizi di Logistica e Deposito Merci (GDP, ATP, ADR)" },
-        { "@type": "Offer", "name": "Trasporti Nazionali per Industrie Aziende e Commercio (Healthcare, Manifatturiere, Produzione e Commercio Industriale, Food, Beverage, GDO, HORECA) (GDP, ATP, ADR)" },
+        { "@type": "Offer", "name": "Trasporti Nazionali (Dedicati, LTL, FTL) (GDP, ATP, ADR)" },
         { "@type": "Offer", "name": "Trasporti Nazionali Merci Pericolose in ADR (GDP, ADR, 7 Radioattivi)" },
         { "@type": "Offer", "name": "Servizi di Consulenza Logistica e Gestionale (GDP)" },
-        { "@type": "Offer", "name": "Servizi di Distribuzione Merci (GDP, ATP, ADR)" },
-        { "@type": "Offer", "name": "Servizi di Deposito Logistico (GDP, ATP, ADR)" },
+        { "@type": "Offer", "name": "Servizi di Round-Trip, Raccolta e Distribuzione Merci (GDP, ATP, ADR)" },
+        { "@type": "Offer", "name": "Servizi di Deposito Logistico Merci e Progetti di logistica (GDP, ATP, ADR)" },
         { "@type": "Offer", "name": "Trasporti Nazionali Urgenti (GDP, ATP, ADR)" }
       ],
       "sameAs": [
@@ -94,6 +94,7 @@
         "streetAddress": "Via Pio La Torre 7",
         "addressLocality": "Barletta",
         "postalCode": "76121",
+        "addressRegion": "BT",
         "addressCountry": "IT"
       },
       "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
@@ -111,6 +112,7 @@
         "streetAddress": "Via Curatoio 5",
         "addressLocality": "Trani",
         "postalCode": "76125",
+        "addressRegion": "BT",
         "addressCountry": "IT"
       },
       "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
@@ -128,6 +130,7 @@
         "streetAddress": "C.da Maccarone snc",
         "addressLocality": "Corato",
         "postalCode": "70033",
+        "addressRegion": "BA",
         "addressCountry": "IT"
       },
       "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
@@ -145,6 +148,7 @@
         "streetAddress": "Interporto",
         "addressLocality": "Bentivoglio",
         "postalCode": "40010",
+        "addressRegion": "BO",
         "addressCountry": "IT"
       },
       "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
@@ -162,6 +166,7 @@
         "streetAddress": "Via Caboto 22",
         "addressLocality": "Montecchio Maggiore",
         "postalCode": "36075",
+        "addressRegion": "VI",
         "addressCountry": "IT"
       },
       "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
@@ -179,6 +184,7 @@
         "streetAddress": "Via Europa 14",
         "addressLocality": "Locate di T.",
         "postalCode": "20085",
+        "addressRegion": "MI",
         "addressCountry": "IT"
       },
       "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
@@ -196,6 +202,7 @@
         "streetAddress": "Via Merulana 183",
         "addressLocality": "Roma",
         "postalCode": "00185",
+        "addressRegion": "RM",
         "addressCountry": "IT"
       },
       "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
