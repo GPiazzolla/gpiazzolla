@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
   <url>
     <loc>https://gpiazzolla.com/</loc>
     <lastmod>2026-02-19T15:35:00+01:00</lastmod>
-    <priority>1.0>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
 
     <image:image>
-      <image:loc>https://gpiazzolla.com/gpiazzolla_v2.jpg</image:loc>
+      <image:loc>https://gpiazzolla.com/gpiazzolla_v2.webp</image:loc>
       <image:title>Gioacchino Piazzolla - Logistica e Trasporti</image:title>
-      <image:caption>Servizi logistici e trasporti in tutta Italia</image:caption>
+      <image:caption>Servizi logistici e trasporti professionali in tutta Italia</image:caption>
     </image:image>
 
     <image:image>
@@ -29,22 +30,20 @@
     </image:image>
 
     <image:image>
-      <image:loc>https://gpiazzolla.com/sfondo-camion.jpg</image:loc>
+      <image:loc>https://gpiazzolla.com/sfondo-camion.webp</image:loc>
       <image:title>Flotta Trasporti Gioacchino Piazzolla</image:title>
-      <image:caption>Soluzioni di trasporto industriale e distribuzione merci</image:caption>
+      <image:caption>Soluzioni di trasporto industriale e distribuzione merci nazionale</image:caption>
     </image:image>
 
     <image:image>
       <image:loc>https://gpiazzolla.com/trasporti-gioacchino-piazzolla_v2.jpg</image:loc>
-      <image:title>CEO Gioacchino Piazzolla</image:title>     
-      <image:caption>CEO Gioacchino Piazzolla</image:caption>
+      <image:title>Gioacchino Piazzolla - CEO &amp; Logistics Expert</image:title>
+      <image:caption>Esperienza ventennale nel settore dell'autotrasporto e della logistica</image:caption>
     </image:image>
 
   </url>
+
 </urlset>
-
-
-
 
 
 
