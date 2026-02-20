@@ -20,6 +20,7 @@
 
   <link rel="preload" as="image" href="trasporti-logistica-deposito_v3.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/npm">
   <link rel="preconnect" href="https://raw.githubusercontent.com">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="icon" type="image/png" href="/gioacchino-piazzolla-trasporti-logistica-favicon96.png" sizes="96x96" />
@@ -1119,9 +1120,35 @@ html {
     <span style="border: solid white; border-width: 0 3px 3px 0; display: inline-block; padding: 5px; transform: rotate(-135deg); margin-top: 3px;"></span>
 </button>
 
-  <script>
-    // Inizializza le icone
-    lucide.createIcons();
+<script>
+(function() {
+    const uff = "08831950801";
+    const mob = "3663279958";
+    const mail = "logistica" + "@" + "gpiazzolla.com";
+    
+    // SEZIONE CONTATTI (Quella blu con la griglia)
+    const tUff = document.getElementById('tel-uff-placeholder');
+    const tMob = document.getElementById('tel-mob-placeholder');
+    const tMail = document.getElementById('mail-placeholder');
+
+    if(tUff) tUff.innerHTML = `<a href="tel:${uff}" style="color:white; text-decoration:none;">0883 1950801</a>`;
+    if(tMob) tMob.innerHTML = `<a href="tel:${mob}" style="color:white; text-decoration:none;">366 3279958</a>`;
+    if(tMail) tMail.innerHTML = `<a href="mailto:${mail}" style="color:white; text-decoration:none;">${mail}</a>`;
+
+    // FOOTER (PEC) - Qui usiamo innerHTML perché è testo semplice
+    const mFooter = document.getElementById("mail-link-footer"); 
+    if(mFooter) {
+        mFooter.setAttribute("href", "mailto:" + mail);
+        mFooter.innerHTML = mail;
+    }
+
+    // HEADER (IL TASTO) - Cambiamo solo il link, NON tocchiamo il testo o le icone
+    const mHeader = document.getElementById("mail-link"); 
+    if(mHeader) {
+        mHeader.setAttribute("href", "mailto:" + mail);
+        // NON facciamo innerHTML, così il tasto resta identico a prima
+    }
+})();
 </script>
   
   <script>
@@ -1163,37 +1190,6 @@ html {
 </script>
 
 <script>
-(function() {
-    const uff = "08831950801";
-    const mob = "3663279958";
-    const mail = "logistica" + "@" + "gpiazzolla.com";
-    
-    // SEZIONE CONTATTI (Quella blu con la griglia)
-    const tUff = document.getElementById('tel-uff-placeholder');
-    const tMob = document.getElementById('tel-mob-placeholder');
-    const tMail = document.getElementById('mail-placeholder');
-
-    if(tUff) tUff.innerHTML = `<a href="tel:${uff}" style="color:white; text-decoration:none;">0883 1950801</a>`;
-    if(tMob) tMob.innerHTML = `<a href="tel:${mob}" style="color:white; text-decoration:none;">366 3279958</a>`;
-    if(tMail) tMail.innerHTML = `<a href="mailto:${mail}" style="color:white; text-decoration:none;">${mail}</a>`;
-
-    // FOOTER (PEC) - Qui usiamo innerHTML perché è testo semplice
-    const mFooter = document.getElementById("mail-link-footer"); 
-    if(mFooter) {
-        mFooter.setAttribute("href", "mailto:" + mail);
-        mFooter.innerHTML = mail;
-    }
-
-    // HEADER (IL TASTO) - Cambiamo solo il link, NON tocchiamo il testo o le icone
-    const mHeader = document.getElementById("mail-link"); 
-    if(mHeader) {
-        mHeader.setAttribute("href", "mailto:" + mail);
-        // NON facciamo innerHTML, così il tasto resta identico a prima
-    }
-})();
-</script>
-  
-<script>
     const form = document.getElementById("contactForm");
     if(form) {
         form.addEventListener("submit", async (e) => {
@@ -1232,6 +1228,16 @@ html {
     }
 </script>
 
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  
+<script>
+    window.addEventListener("load", function(){
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    });
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" defer></script>
 <script>
     window.addEventListener("load", function(){
@@ -1256,18 +1262,18 @@ html {
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-23R2ZW7WFW"></script>
+  
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-23R2ZW7WFW');
 </script>
-
-<script src="https://unpkg.com/lucide@latest" defer></script>
   
 </body>
 
 </html>
+
 
 
 
