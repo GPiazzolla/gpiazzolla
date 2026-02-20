@@ -499,19 +499,19 @@ html {
     /* CONTENITORE PRINCIPALE */
         .servizi-scroll {
     background: transparent;
-    padding: 40px 0;
-    overflow: hidden;
+    padding: 10px 0; /* Ridotto da 40px a 10px per togliere il vuoto */
+    overflow: visible; /* Fondamentale: permette allo zoom di uscire dai bordi senza tagliarsi */
     border: none;
     box-shadow: none;
 }
 
-        /* SFUMATURA AI LATI */
         .scroll-wrapper {
-            overflow: hidden;
-            width: 100%;
-            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
+    overflow: hidden; /* Mantiene il taglio laterale per le icone che entrano/escono */
+    width: 100%;
+    padding: 40px 0; /* Aggiungo spazio interno qui per dare "respiro" allo zoom */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
 
         /* BINARIO DELL'ANIMAZIONE */
         .scroll-track {
@@ -529,8 +529,12 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-decoration: none; /* Toglie la sottolineatura dei link */
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Effetto zoom elastico */
+    text-decoration: none;
+    /* Transizione più fluida */
+    transition: transform 0.3s ease-out; 
+    /* Impedisce che il testo vada a capo male durante lo zoom */
+    white-space: nowrap;
+          backface-visibility: hidden;
 }
 
         .servizio svg {
@@ -542,7 +546,8 @@ html {
         }
 
         .servizio:hover {
-    transform: scale(1.15); /* Ingrandisce del 15% */
+    transform: scale(1.15); /* Ingrandimento del 15% */
+    z-index: 10; /* Porta l'icona sopra le altre durante lo zoom */
 }
 
 /* Mantiene il colore del testo originale anche se è un link */
@@ -1251,6 +1256,7 @@ html {
 </body>
 
 </html>
+
 
 
 
