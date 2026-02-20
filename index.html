@@ -982,11 +982,50 @@ html {
 </footer>
   
 <button id="backToTop" 
-        onclick="scrollToTop()" 
+        type="button"
+        onclick="scrollToTop(event)" 
         aria-label="Torna all'inizio della pagina" 
-        style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; border: 2px solid #f97216; background: #004270; color: white; width: 50px; height: 50px; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); align-items: center; justify-content: center;">
+        style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; border: 2px solid #f97216; background: #004270; color: white; width: 50px; height: 50px; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); align-items: center; justify-content: center; outline: none; -webkit-tap-highlight-color: transparent;">
     <span style="border: solid white; border-width: 0 3px 3px 0; display: inline-block; padding: 5px; transform: rotate(-135deg); margin-top: 3px;"></span>
 </button>
+
+  <script>
+    // Unificata gestione scroll
+    window.onscroll = function() {
+        const btn = document.getElementById("backToTop");
+        // Verifica se il pulsante esiste per evitare errori in console
+        if (btn) {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+    };
+
+    function scrollToTop(event) {
+        // 1. Impedisce comportamenti di default (evita che vada giù invece che su)
+        if (event) event.preventDefault();
+
+        // 2. Esegue lo scroll verso l'alto
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // 3. FIX MOBILE: Toglie il focus dal tasto dopo il click
+        // Questo elimina l'effetto "zoom" e il riquadro da campo di inserimento
+        if (document.activeElement) {
+            document.activeElement.blur();
+        }
+    }
+
+    // Protezione Immagini (mantenuta come l'avevi impostata)
+    document.addEventListener('contextmenu', e => { 
+        if (e.target.tagName === 'IMG') e.preventDefault(); 
+    }, false);
+    
+    document.addEventListener('dragstart', e => { 
+        if (e.target.tagName === 'IMG') e.preventDefault(); 
+    }, false);
+</script>
 
 <script>
 (function() {
@@ -1089,29 +1128,10 @@ html {
     gtag('config', 'G-23R2ZW7WFW');
 </script>
 
-<script>
-    // Unificata gestione scroll
-    window.onscroll = function() {
-        const btn = document.getElementById("backToTop");
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            btn.style.display = "flex";
-        } else {
-            btn.style.display = "none";
-        }
-    };
-
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Protezione Immagini
-    document.addEventListener('contextmenu', e => { if (e.target.tagName === 'IMG') e.preventDefault(); }, false);
-    document.addEventListener('dragstart', e => { if (e.target.tagName === 'IMG') e.preventDefault(); }, false);
-</script>
-
 </body>
 
 </html>
+
 
 
 
