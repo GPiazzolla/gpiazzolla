@@ -31,7 +31,8 @@
   <link rel="alternate" hreflang="x-default" href="https://gpiazzolla.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   
   <meta property="og:title" content="Gioacchino Piazzolla - Consulenza | Logistica | Trasporti">
   <meta property="og:description" content="Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate">
@@ -495,6 +496,73 @@ html {
     transform: translateY(-0.7px);
   }
 
+    /* CONTENITORE PRINCIPALE */
+        .servizi-scroll {
+    background: transparent;
+    padding: 40px 0;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+}
+
+        /* SFUMATURA AI LATI */
+        .scroll-wrapper {
+            overflow: hidden;
+            width: 100%;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        /* BINARIO DELL'ANIMAZIONE */
+        .scroll-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-infinito 35s linear infinite;
+        }
+
+        /* SINGOLO ELEMENTO */
+        .servizio {
+            min-width: 220px;
+            margin: 0 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .servizio svg {
+            width: 42px;
+            height: 42px;
+            stroke: var(--accent-orange); /* Colore Arancio */
+            stroke-width: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .servizio span {
+            font-size: 13px;
+            font-weight: 900;
+            color: var(--main-blue); /* Colore Blu */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        /* ANIMAZIONE */
+        @keyframes scroll-infinito {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* FERMA AL PASSAGGIO DEL MOUSE */
+        .scroll-track:hover {
+            animation-play-state: paused;
+        }
+.servizio:hover span {
+    color: var(--light-blue); /* La scritta diventa azzurra quando ci passi sopra */
+    transition: color 0.3s ease;
+}
+
 
     /* --- FORM & FOOTER --- */
     .contact-card { background: #fff; border: 1px solid #eee; padding: 30px; border-radius: 10px; margin-top: 30px; }
@@ -808,6 +876,46 @@ html {
 </div>
 </section>
 
+      <section class="servizi-scroll">
+    <div class="scroll-wrapper">
+        <div class="scroll-track">
+            
+            <div class="servizio"><i data-lucide="headphones"></i><span>Consulenza<br>Gratuita</span></div>
+            <div class="servizio"><i data-lucide="warehouse"></i><span>Logistica<br>e Deposito</span></div>
+            <div class="servizio"><i data-lucide="truck"></i><span>Trasporti<br>Dedicati</span></div>
+            <div class="servizio"><i data-lucide="flame"></i><span>A.D.R.<br>Merci Pericolose</span></div>
+            <div class="servizio"><i data-lucide="clock"></i><span>Express<br>24/48 H</span></div>
+            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Parziali<br>LTL</span></div>
+            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Completi<br>FTL</span></div>
+            <div class="servizio"><i data-lucide="boxes"></i><span>Spedizioni<br>Groupage</span></div>
+            <div class="servizio"><i data-lucide="radiation"></i><span>Trasporto<br>Radioattivi</span></div>
+            <div class="servizio"><i data-lucide="factory"></i><span>Merci<br>Industriali</span></div>
+            <div class="servizio"><i data-lucide="pill"></i><span>Farmaci<br>urgenti</span></div>
+            <div class="servizio"><i data-lucide="thermometer-snowflake"></i><span>alimenti<br>GDO</span></div>
+            <div class="servizio"><i data-lucide="maximize"></i><span>Merci<br>Fuori Misura</span></div>
+            <div class="servizio"><i data-lucide="hand-coins"></i><span>Contrassegni</span></div>
+            <div class="servizio"><i data-lucide="file-check"></i><span>Assicurazione rcv<br>All Risks Per Conto</span></div>
+            
+
+            <div class="servizio"><i data-lucide="headphones"></i><span>Consulenza<br>Gratuita</span></div>
+            <div class="servizio"><i data-lucide="warehouse"></i><span>Logistica<br>e Deposito</span></div>
+            <div class="servizio"><i data-lucide="truck"></i><span>Trasporti<br>Dedicati</span></div>
+            <div class="servizio"><i data-lucide="flame"></i><span>A.D.R.<br>Merci Pericolose</span></div>
+            <div class="servizio"><i data-lucide="clock"></i><span>Express<br>24/48 H</span></div>
+            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Parziali<br>LTL</span></div>
+            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Completi<br>FTL</span></div>
+            <div class="servizio"><i data-lucide="boxes"></i><span>Spedizioni<br>Groupage</span></div>
+            <div class="servizio"><i data-lucide="radiation"></i><span>Trasporto<br>Radioattivi</span></div>
+            <div class="servizio"><i data-lucide="factory"></i><span>Merci<br>Industriali</span></div>
+            <div class="servizio"><i data-lucide="pill"></i><span>Farmaci<br>urgenti</span></div>
+            <div class="servizio"><i data-lucide="thermometer-snowflake"></i><span>alimenti<br>GDO</span></div>
+            <div class="servizio"><i data-lucide="maximize"></i><span>Merci<br>Fuori Misura</span></div>
+            <div class="servizio"><i data-lucide="hand-coins"></i><span>Contrassegni</span></div>
+            <div class="servizio"><i data-lucide="file-check"></i><span>Assicurazione rcv<br>All Risks Per Conto</span></div>
+        </div>
+    </div>
+</section>
+
 <section id="contatti" style="background: transparent; padding: 50px 20px; max-width: 1100px; margin: 40px auto; font-family: 'Inter', sans-serif;">
     <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 40px;">
         <div>
@@ -996,6 +1104,11 @@ html {
 </button>
 
   <script>
+    // Inizializza le icone
+    lucide.createIcons();
+</script>
+  
+  <script>
     // Unificata gestione scroll
     window.onscroll = function() {
         const btn = document.getElementById("backToTop");
@@ -1137,6 +1250,7 @@ html {
 </body>
 
 </html>
+
 
 
 
