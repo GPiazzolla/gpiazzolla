@@ -522,14 +522,16 @@ html {
 
         /* SINGOLO ELEMENTO */
         .servizio {
-            min-width: 220px;
-            margin: 0 30px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+    min-width: 220px;
+    margin: 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Toglie la sottolineatura dei link */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Effetto zoom elastico */
+}
 
         .servizio svg {
             width: 42px;
@@ -539,14 +541,20 @@ html {
             margin-bottom: 15px;
         }
 
-        .servizio span {
-            font-size: 13px;
-            font-weight: 900;
-            color: var(--main-blue); /* Colore Blu */
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            line-height: 1.2;
-        }
+        .servizio:hover {
+    transform: scale(1.15); /* Ingrandisce del 15% */
+}
+
+/* Mantiene il colore del testo originale anche se è un link */
+.servizio span {
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--main-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin-top: 5px;
+}
 
         /* ANIMAZIONE */
         @keyframes scroll-infinito {
@@ -558,11 +566,6 @@ html {
         .scroll-track:hover {
             animation-play-state: paused;
         }
-.servizio:hover span {
-    color: var(--light-blue); /* La scritta diventa azzurra quando ci passi sopra */
-    transition: color 0.3s ease;
-}
-
 
     /* --- FORM & FOOTER --- */
     .contact-card { background: #fff; border: 1px solid #eee; padding: 30px; border-radius: 10px; margin-top: 30px; }
@@ -879,39 +882,37 @@ html {
       <section class="servizi-scroll">
     <div class="scroll-wrapper">
         <div class="scroll-track">
-            
-            <div class="servizio"><i data-lucide="headphones"></i><span>Consulenza<br>Gratuita</span></div>
-            <div class="servizio"><i data-lucide="warehouse"></i><span>Logistica<br>e Deposito</span></div>
-            <div class="servizio"><i data-lucide="truck"></i><span>Trasporti<br>Dedicati</span></div>
-            <div class="servizio"><i data-lucide="flame"></i><span>A.D.R.<br>Merci Pericolose</span></div>
-            <div class="servizio"><i data-lucide="clock"></i><span>Express<br>24/48 H</span></div>
-            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Parziali<br>LTL</span></div>
-            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Completi<br>FTL</span></div>
-            <div class="servizio"><i data-lucide="boxes"></i><span>Spedizioni<br>Groupage</span></div>
-            <div class="servizio"><i data-lucide="radiation"></i><span>Trasporto<br>Radioattivi</span></div>
-            <div class="servizio"><i data-lucide="factory"></i><span>Merci<br>Industriali</span></div>
-            <div class="servizio"><i data-lucide="pill"></i><span>Farmaci<br>urgenti</span></div>
-            <div class="servizio"><i data-lucide="thermometer-snowflake"></i><span>alimenti<br>GDO</span></div>
-            <div class="servizio"><i data-lucide="package"></i><span>Merci<br>Fuori Misura</span></div>
-            <div class="servizio"><i data-lucide="hand-coins"></i><span>Contrassegni</span></div>
-            <div class="servizio"><i data-lucide="file-check"></i><span>Assicurazione rcv<br>All Risks Per Conto</span></div>
-            
+            <a href="#contact-form" class="servizio"><i data-lucide="headphones"></i><span>Consulenza<br>Gratuita</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="warehouse"></i><span>Logistica<br>e Deposito</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="truck"></i><span>Trasporti<br>Dedicati</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="flame"></i><span>A.D.R.<br>Merci Pericolose</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="clock"></i><span>Express<br>24/48 H</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="truck"></i><span>Carichi Parziali<br>LTL</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="truck"></i><span>Carichi Completi<br>FTL</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="boxes"></i><span>Spedizioni<br>Groupage</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="radiation"></i><span>Trasporto<br>Radioattivi</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="factory"></i><span>Merci<br>Industriali</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="pill"></i><span>Farmaci<br>urgenti</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="thermometer-snowflake"></i><span>alimenti<br>GDO</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="maximize"></i><span>Merci<br>Fuori Misura</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="hand-coins"></i><span>Contrassegni</span></a>
+            <a href="#contact-form" class="servizio"><i data-lucide="file-check"></i><span>Assicurazione rcv<br>All Risks Per Conto</span></a>
 
-            <div class="servizio"><i data-lucide="headphones"></i><span>Consulenza<br>Gratuita</span></div>
-            <div class="servizio"><i data-lucide="warehouse"></i><span>Logistica<br>e Deposito</span></div>
-            <div class="servizio"><i data-lucide="truck"></i><span>Trasporti<br>Dedicati</span></div>
-            <div class="servizio"><i data-lucide="flame"></i><span>A.D.R.<br>Merci Pericolose</span></div>
-            <div class="servizio"><i data-lucide="clock"></i><span>Express<br>24/48 H</span></div>
-            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Parziali<br>LTL</span></div>
-            <div class="servizio"><i data-lucide="truck"></i><span>Carichi Completi<br>FTL</span></div>
-            <div class="servizio"><i data-lucide="boxes"></i><span>Spedizioni<br>Groupage</span></div>
-            <div class="servizio"><i data-lucide="radiation"></i><span>Trasporto<br>Radioattivi</span></div>
-            <div class="servizio"><i data-lucide="factory"></i><span>Merci<br>Industriali</span></div>
-            <div class="servizio"><i data-lucide="pill"></i><span>Farmaci<br>urgenti</span></div>
-            <div class="servizio"><i data-lucide="thermometer-snowflake"></i><span>alimenti<br>GDO</span></div>
-            <div class="servizio"><i data-lucide="package"></i><span>Merci<br>Fuori Misura</span></div>
-            <div class="servizio"><i data-lucide="hand-coins"></i><span>Contrassegni</span></div>
-            <div class="servizio"><i data-lucide="file-check"></i><span>Assicurazione rcv<br>All Risks Per Conto</span></div>
+            <a href="#contact-form" class="servizio"><i data-lucide="headphones"></i><span>Consulenza<br>Gratuita</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="warehouse"></i><span>Logistica<br>e Deposito</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="truck"></i><span>Trasporti<br>Dedicati</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="flame"></i><span>A.D.R.<br>Merci Pericolose</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="clock"></i><span>Express<br>24/48 H</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="truck"></i><span>Carichi Parziali<br>LTL</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="truck"></i><span>Carichi Completi<br>FTL</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="boxes"></i><span>Spedizioni<br>Groupage</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="radiation"></i><span>Trasporto<br>Radioattivi</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="factory"></i><span>Merci<br>Industriali</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="pill"></i><span>Farmaci<br>urgenti</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="thermometer-snowflake"></i><span>alimenti<br>GDO</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="maximize"></i><span>Merci<br>Fuori Misura</span></a>
+            <a href="mailto:logistica@gpiazzolla.com" class="servizio"><i data-lucide="hand-coins"></i><span>Contrassegni</span></a>
+            <a href="#contact-form" class="servizio"><i data-lucide="file-check"></i><span>Assicurazione rcv<br>All Risks Per Conto</span></a>
         </div>
     </div>
 </section>
@@ -1250,6 +1251,7 @@ html {
 </body>
 
 </html>
+
 
 
 
