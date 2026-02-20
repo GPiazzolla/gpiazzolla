@@ -31,8 +31,9 @@
   <link rel="alternate" hreflang="x-default" href="https://gpiazzolla.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+  <noscript> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"> </noscript>
   
   <meta property="og:title" content="Gioacchino Piazzolla - Consulenza | Logistica | Trasporti">
   <meta property="og:description" content="Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate">
@@ -1262,9 +1263,12 @@ html {
     gtag('config', 'G-23R2ZW7WFW');
 </script>
 
+<script src="https://unpkg.com/lucide@latest" defer></script>
+  
 </body>
 
 </html>
+
 
 
 
