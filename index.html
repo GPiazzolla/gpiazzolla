@@ -499,8 +499,14 @@ html {
     /* CONTENITORE PRINCIPALE */
         .servizi-scroll {
     background: transparent;
-    padding: 10px 0; /* Ridotto da 40px a 10px per togliere il vuoto */
-    overflow: visible; /* Fondamentale: permette allo zoom di uscire dai bordi senza tagliarsi */
+    /* 1. AZZERA IL PADDING ESTERNO */
+    padding: 0; 
+    
+    /* 2. USA MARGINI NEGATIVI PER AVVICINARE LE SEZIONI */
+    margin-top: -30px;    /* Tira la barra verso l'alto */
+    margin-bottom: -50px; /* Tira i contatti (sotto) verso l'alto */
+    
+    overflow: visible; 
     border: none;
     box-shadow: none;
 }
@@ -1257,6 +1263,7 @@ html {
 </body>
 
 </html>
+
 
 
 
