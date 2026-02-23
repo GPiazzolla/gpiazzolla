@@ -68,7 +68,7 @@
       "url": "https://gpiazzolla.com/",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
-      "description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate I nostri maggiori clienti: FassaBortolo, Casillo, Pedon, GeneralTrade HappyCasa, Quargentan, Pedrollo, Ferroli, Olearia Desantis, Gruppo Stir, EventiService, InsoSystem, Zero&Company Suns, SuperBeton, Fornaci Calce Grigolin, Cuki, Miti, Domoliving ed altri. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+      "description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. I nostri maggiori clienti: FassaBortolo, Casillo, Pedon, GeneralTrade HappyCasa, Quargentan, Pedrollo, Ferroli, Olearia Desantis, Gruppo Stir, EventiService, InsoSystem, Zero&Company Suns, SuperBeton, Fornaci Calce Grigolin, Cuki, Miti, Domoliving ed altri. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
       "telephone": ["+3908831950801", "+393663279958"],
       "slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
       "serviceType": "Transport service / Logistic service / Delivery service",
@@ -197,13 +197,16 @@
       ]
     },
     {
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#sede-barletta",
       "name": "Sede Legale - Barletta PUGLIA",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
       "url": "https://gpiazzolla.com",
       "telephone": ["+3908831950801", "+393663279958"],
+"description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+"slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
+      "serviceType": "Transport service / Logistic service / Delivery service",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Pio La Torre 7",
@@ -212,16 +215,43 @@
         "addressRegion": "BT",
         "addressCountry": "IT"
       },
-      "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
+      "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  },
+  "sameAs": [ 
+        "https://www.google.it/maps/place/Gioacchino+Piazzolla/@41.303625,16.2720211,17z/data=!3m1!4b1!4m6!3m5!1s0x4853b6f3cbc113d9:0x83c1241536cc98ec!8m2!3d41.303625!4d16.274596!16s%2Fg%2F11vc7xj5vn?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D",
+        "https://www.linkedin.com/company/gioacchino-piazzolla",
+        "https://maps.apple.com/place?place-id=IAB907A4351D93218&address=Via+Pio+La+Torre+7%2C+76121+Barletta+BT%2C+Italia&coordinate=41.3036451%2C16.2745641&name=Gioacchino+Piazzolla&_provider=9902",
+        "https://www.linkedin.com/in/gioacchino-p86",
+        "https://dovecarico.it"
+  ]
+    },
+    {
+      "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#sede-trani",
       "name": "Sede Operativa - Trani PUGLIA",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
       "url": "https://gpiazzolla.com",
       "telephone": ["+3908831950801", "+393663279958"],
+"description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+"slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
+      "serviceType": "Transport service / Logistic service / Delivery service",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Curatoio 5",
@@ -230,16 +260,41 @@
         "addressRegion": "BT",
         "addressCountry": "IT"
       },
-      "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
+      "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  },
+  "sameAs": [ 
+        "https://www.linkedin.com/company/gioacchino-piazzolla",
+        "https://www.linkedin.com/in/gioacchino-p86",
+        "https://dovecarico.it"
+  ]
+    },
+    {
+      "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#sede-corato",
       "name": "Sede Operativa - Corato PUGLIA",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
       "url": "https://gpiazzolla.com",
       "telephone": ["+3908831950801", "+393663279958"],
+"description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+"slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
+      "serviceType": "Transport service / Logistic service / Delivery service",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "C.da Maccarone snc",
@@ -248,16 +303,41 @@
         "addressRegion": "BA",
         "addressCountry": "IT"
       },
-      "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
+      "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  },
+  "sameAs": [ 
+        "https://www.linkedin.com/company/gioacchino-piazzolla",
+        "https://www.linkedin.com/in/gioacchino-p86",
+        "https://dovecarico.it"
+  ]
+    },
+    {
+      "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#sede-bologna",
       "name": "Sede Operativa - Bologna EMILIA ROMAGNA",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
       "url": "https://gpiazzolla.com",
       "telephone": ["+3908831950801", "+393663279958"],
+"description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+"slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
+      "serviceType": "Transport service / Logistic service / Delivery service",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Interporto Blocco 4.3",
@@ -266,16 +346,41 @@
         "addressRegion": "BO",
         "addressCountry": "IT"
       },
-      "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
+      "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  },
+  "sameAs": [ 
+        "https://www.linkedin.com/company/gioacchino-piazzolla",
+        "https://www.linkedin.com/in/gioacchino-p86",
+        "https://dovecarico.it"
+  ]
+    },
+    {
+      "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#sede-vicenza",
       "name": "Sede Operativa - Vicenza VENETO",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
       "url": "https://gpiazzolla.com",
       "telephone": ["+3908831950801", "+393663279958"],
+"description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+"slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
+      "serviceType": "Transport service / Logistic service / Delivery service",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Caboto 22",
@@ -284,16 +389,41 @@
         "addressRegion": "VI",
         "addressCountry": "IT"
       },
-      "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
+      "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  },
+  "sameAs": [ 
+        "https://www.linkedin.com/company/gioacchino-piazzolla",
+        "https://www.linkedin.com/in/gioacchino-p86",
+        "https://dovecarico.it"
+  ]
+    },
+    {
+      "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#sede-milano",
       "name": "Sede Operativa - Milano LOMBARDIA",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
       "url": "https://gpiazzolla.com",
       "telephone": ["+3908831950801", "+393663279958"],
+"description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+"slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
+      "serviceType": "Transport service / Logistic service / Delivery service",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Europa 14",
@@ -302,16 +432,41 @@
         "addressRegion": "MI",
         "addressCountry": "IT"
       },
-      "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
+      "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  },
+  "sameAs": [ 
+        "https://www.linkedin.com/company/gioacchino-piazzolla",
+        "https://www.linkedin.com/in/gioacchino-p86",
+        "https://dovecarico.it"
+  ]
+    },
+    {
+      "@type": ["LocalBusiness", "Service"],
       "@id": "https://gpiazzolla.com/#sede-roma",
       "name": "Sede Operativa e Relazioni Esterne - Roma LAZIO",
       "logo": "https://gpiazzolla.com/gpiazzolla_v2.webp",
       "image": "https://gpiazzolla.com/sfondo-camion.webp",
       "url": "https://gpiazzolla.com",
       "telephone": ["+3908831950801", "+393663279958"],
+"description": "Gioacchino Piazzolla – Servizi logistici, trasporti e spedizioni ADR in tutta Italia. Sedi: Puglia, Milano (Lombardia), Bologna (Emilia Romagna), Vicenza (Veneto) e Roma (Lazio). Contattaci per preventivi, progetti e soluzioni personalizzate. Certificazioni: ADR Classi 1 2 3 4 5 6 7 8 9, Temperatura Controllata ATP, Good Distribution Practice GDP.",
+"slogan": "Da oltre 20 anni specialisti in trasporti e soluzioni logistiche. Dal 2005 muoviamo il tuo business",
+      "serviceType": "Transport service / Logistic service / Delivery service",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Merulana 183",
@@ -320,7 +475,29 @@
         "addressRegion": "RM",
         "addressCountry": "IT"
       },
-      "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-12:00"
+      "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "12:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Italy"
+  },
+  "sameAs": [ 
+        "https://www.linkedin.com/company/gioacchino-piazzolla",
+        "https://www.linkedin.com/in/gioacchino-p86",
+        "https://dovecarico.it"
+  ]
     },
     {
       "@type": "FAQPage",
@@ -1279,6 +1456,7 @@ html {
 </body>
 
 </html>
+
 
 
 
