@@ -7,20 +7,20 @@
 
   <url>
     <loc>https://gpiazzolla.com/</loc>
-    <lastmod>2026-02-23T08:35:00+01:00</lastmod>
+    <lastmod>2026-02-26T16:00:00+01:00</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
 
-    <image:image>
-      <image:loc>https://gpiazzolla.com/gpiazzolla_v2.webp</image:loc>
-      <image:title>Gioacchino Piazzolla - Logistica e Trasporti</image:title>
-      <image:caption>Servizi logistici e trasporti professionali in tutta Italia</image:caption>
-    </image:image>
-
-    <image:image>
+     <image:image>
       <image:loc>https://gpiazzolla.com/trasporti-logistica-deposito_v3.jpg</image:loc>
       <image:title>Sede Logistica e Deposito Merci</image:title>
       <image:caption>Gestione magazzino, deposito e spedizioni ADR in Puglia e tutta Italia</image:caption>
+    </image:image>
+
+          <image:image>
+      <image:loc>https://gpiazzolla.com/gpiazzolla_v2.webp</image:loc>
+      <image:title>Gioacchino Piazzolla - ADR | Logistica | Trasporti</image:title>
+      <image:caption>Servizi logistici e trasporti professionali in tutta Italia</image:caption>
     </image:image>
 
     <image:image>
@@ -35,15 +35,10 @@
       <image:caption>Soluzioni di trasporto industriale e distribuzione merci nazionale</image:caption>
     </image:image>
 
-    <image:image>
-      <image:loc>https://gpiazzolla.com/trasporti-gioacchino-piazzolla_v2.jpg</image:loc>
-      <image:title>Gioacchino Piazzolla - CEO &amp; Logistics Expert</image:title>
-      <image:caption>Esperienza ventennale nel settore dell'autotrasporto e della logistica</image:caption>
-    </image:image>
-
   </url>
 
 </urlset>
+
 
 
 
