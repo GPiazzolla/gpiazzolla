@@ -13,13 +13,13 @@
 
      <image:image>
       <image:loc>https://gpiazzolla.com/trasporti-logistica-deposito_v3.jpg</image:loc>
-      <image:title>Sede Logistica e Deposito Merci</image:title>
+      <image:title>Gioacchino Piazzolla - ADR | LOGISTICA | TRASPORTI</image:title>
       <image:caption>Gestione magazzino, deposito e spedizioni ADR in Puglia e tutta Italia</image:caption>
     </image:image>
 
           <image:image>
       <image:loc>https://gpiazzolla.com/gpiazzolla_v2.webp</image:loc>
-      <image:title>Gioacchino Piazzolla - ADR | Logistica | Trasporti</image:title>
+      <image:title>Gioacchino Piazzolla - ADR | LOGISTICA | TRASPORTI</image:title>
       <image:caption>Servizi logistici e trasporti professionali in tutta Italia</image:caption>
     </image:image>
 
@@ -38,6 +38,7 @@
   </url>
 
 </urlset>
+
 
 
 
