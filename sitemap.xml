@@ -7,14 +7,26 @@
 
   <url>
     <loc>https://gpiazzolla.com/</loc>
-    <lastmod>2026-10-04T11:47:00+02:00</lastmod>
+    <lastmod>2026-10-06T09:00:00+02:00</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
 
      <image:image>
+      <image:loc>https://gpiazzolla.com/capannone.png</image:loc>
+      <image:title>GPIAZZOLLA TRASPORTI - Adr | Logistica | Trasporti</image:title>
+      <image:caption>Trasporti dedicati FTL LTL</image:caption>
+    </image:image>
+          
+          <image:image>
       <image:loc>https://gpiazzolla.com/trasporti-logistica-deposito_v3.jpg</image:loc>
       <image:title>GPIAZZOLLA TRASPORTI - Adr | Logistica | Trasporti</image:title>
       <image:caption>Gestione trasporti FTL LTL, deposito merci, logistica e spedizioni ADR in Puglia e tutta Italia</image:caption>
+    </image:image>
+
+          <image:image>
+      <image:loc>https://gpiazzolla.com/camion.png</image:loc>
+      <image:title>GPIAZZOLLA TRASPORTI - Adr | Logistica | Trasporti</image:title>
+      <image:caption>Flotta mezzi trasporto merci e logistica</image:caption>
     </image:image>
 
           <image:image>
